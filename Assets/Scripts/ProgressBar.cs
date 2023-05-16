@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ProgressBar : MonoBehaviour
 {
@@ -10,17 +11,19 @@ public class ProgressBar : MonoBehaviour
     [SerializeField] private Image _bar;
     [SerializeField] private Image _highlight;
     [SerializeField] private Image _button;
+    private GameObject _highlightObject;
+    public RectTransform ButtonContainer;
     private float _buttonpos;
     private float _highlightposmin;
     private float _highlightposmax;
     private float _value = 0;
     public float speed = 3f;
-    public RectTransform ButtonContainer;
-    public bool isActive = true;
+    public bool isActive = false;
+    public bool OnOffAtStart = true;
     private bool Scored;
+    private bool TimerStart = true;
     private int CurrentStage;
     bool hasStopped = false;
-    private GameObject MainBody;
     private GameObject compartment1Pass;
     private GameObject compartment1Fail;
     private GameObject compartment2Pass;
@@ -29,10 +32,12 @@ public class ProgressBar : MonoBehaviour
     private GameObject compartment3Fail;
     private GameObject compartment4Pass;
     private GameObject compartment4Fail;
+    private GameObject _countdowntxtObject;
     void Start()
     {
+
         CurrentStage = 1;
-        MainBody = GameObject.Find("progressbar");
+        _currentTime = StartingTime;
         GameObject compartment1 = GameObject.Find("Compartment1");
         GameObject compartment2 = GameObject.Find("Compartment2");
         GameObject compartment3 = GameObject.Find("Compartment3");
@@ -45,9 +50,15 @@ public class ProgressBar : MonoBehaviour
         compartment3Fail = FindChildrenWithTag(compartment3, "Fail");
         compartment4Pass = FindChildrenWithTag(compartment4, "Pass");
         compartment4Fail = FindChildrenWithTag(compartment4, "Fail");
-
-         Health Heal = GetComponent<Health>();
-         Health Damage = GetComponent<Health>();
+        _countdowntxtObject = GameObject.Find("Timer");
+        _highlightObject = GameObject.Find("Highlights");
+        _highlightObject.SetActive(false);
+        if (OnOffAtStart == false)
+        {
+            gameObject.SetActive(false);
+        }
+        Health Heal = GetComponent<Health>();
+        Health Damage = GetComponent<Health>();
     }
     private GameObject FindChildrenWithTag(GameObject parent, string tag)
     {
@@ -65,12 +76,11 @@ public class ProgressBar : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
+        if (TimerStart == true)
         {
-            isActive = true;
+            Timer();
         }
-        
-        if (isActive == true)
+        if (isActive == true && TimerStart == false)
         {
             Randomizer();
             StartCoroutine(ActiveBar(_value, 100, speed));
@@ -88,6 +98,28 @@ public class ProgressBar : MonoBehaviour
         //_buttonpos = _button.GetComponent<RectTransform>()
     }
 
+    [SerializeField] private TextMeshProUGUI _countdowntext;
+    private float _currentTime;
+    public float StartingTime = 5f;
+    void Timer()
+    {
+        _currentTime -= 1 * Time.deltaTime;
+        _countdowntext.text = _currentTime.ToString("0");
+        if (_currentTime <= 3)
+        {
+            float t = Mathf.InverseLerp(1, 3, _currentTime);
+            _countdowntext.color = Color.Lerp(Color.red, Color.white, t);
+        }
+        if (_currentTime <= 0)
+        {
+            Debug.Log("Ran out of time.");
+            TimerStart = false;
+            isActive = true;
+            _countdowntxtObject.SetActive(false);
+            _highlightObject.SetActive(true);
+        }
+    }
+
     void ResetBar()
     {
         _value = 0;
@@ -102,61 +134,48 @@ public class ProgressBar : MonoBehaviour
                 if (Scored)
                 {
                     SetActiveForCompartment(compartment1Pass);
-                    //Debug.Log("Scored" + Score);
-
-                        health.Heal(10f);
-        
+                    health.Heal(10f);
                 }
                 else
                 {
                     SetActiveForCompartment(compartment1Fail);
-                    //Debug.Log("Missed" + Score);
-                    
-                        health.Damage(10f);
-                    
+                    health.Damage(10f);
                 }
                 break;
             case 2:
                 if (Scored)
                 {
                     SetActiveForCompartment(compartment2Pass);
-                    
-
-                        health.Heal(10f);
+                    health.Heal(10f);
                 }
                 else
                 {
                     SetActiveForCompartment(compartment2Fail);
-                    
-                        health.Damage(10f);
+                    health.Damage(10f);
                 }
                 break;
             case 3:
                 if (Scored)
                 {
                     SetActiveForCompartment(compartment3Pass);
-
-                        health.Heal(10f);
+                    health.Heal(10f);
                 }
                 else
                 {
                     SetActiveForCompartment(compartment3Fail);
-                    
-                        health.Damage(10f);
+                    health.Damage(10f);
                 }
                 break;
             case 4:
                 if (Scored)
                 {
                     SetActiveForCompartment(compartment4Pass);
-
-                        health.Heal(10f);
+                    health.Heal(10f);
                 }
                 else
                 {
                     SetActiveForCompartment(compartment4Fail);
-                    
-                        health.Damage(10f);
+                    health.Damage(10f);
                 }
                 break;
             default:
@@ -164,7 +183,9 @@ public class ProgressBar : MonoBehaviour
                 break;
         }
         CurrentStage++;
-        
+        System.Threading.Thread.Sleep(500);
+        hasStopped = false;
+        ResetBar();
     }
     private void SetActiveForCompartment(GameObject Compartment)
     {
@@ -184,9 +205,9 @@ public class ProgressBar : MonoBehaviour
     {
         if (CurrentStage >= 5)
         {
-            Destroy(MainBody);
+            System.Threading.Thread.Sleep(500);
+            Destroy(gameObject);
         }
-
         isActive = false;
         Debug.Log("Current stage: " + CurrentStage);
         for (float t = 0f; t < duration; t += Time.deltaTime)
@@ -214,18 +235,12 @@ public class ProgressBar : MonoBehaviour
             if (_buttonpos <= _highlightposmin && _buttonpos >= _highlightposmax)
             {
                 Scored = true;
-                
             }
             else
             {
                 Scored = false;
-                
             }
         }
         StageSetter();
-        System.Threading.Thread.Sleep(500); // wait for 1 sec
-        hasStopped = false;
-        ResetBar();
     }
 }
-
