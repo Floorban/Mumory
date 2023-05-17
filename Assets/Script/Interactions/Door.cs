@@ -12,9 +12,6 @@ public class Door : MonoBehaviour, IInteractable
     public GameObject uiGame;
     public ProgressBar progressBar;
     
-
-
-
     private void Start()
     {
         _promptText = GetComponentInChildren<TextMeshProUGUI>();
@@ -39,20 +36,12 @@ public class Door : MonoBehaviour, IInteractable
         return false;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            progressBar.isActive = true; // Set the progress bar to active
-        }
-    }
-
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
         {
             uiGame.SetActive(true); // Show the mini-game UI
-            progressBar.isActive = true; // Set the progress bar to active
+            //progressBar.isActive = true; // Set the progress bar to active
 
         }
     }
