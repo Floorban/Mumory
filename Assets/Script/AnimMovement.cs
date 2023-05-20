@@ -13,7 +13,7 @@ public class AnimMovement : MonoBehaviour
     Vector2 currentMovementInput;
     Vector3 currentMovement;
     bool isMovementPressed;
-    float rotationFactorPerFrame = 4f;
+    float rotationFactorPerFrame = 3.5f;
 
 
 
@@ -90,7 +90,7 @@ public class AnimMovement : MonoBehaviour
     {
         handleAnimation();
         handleRotation();
-        characterController.Move(currentMovement * Time.deltaTime * 2.2f);
+        characterController.Move(currentMovement * Time.deltaTime * 2.3f);
     }
 
     void OnEnable()

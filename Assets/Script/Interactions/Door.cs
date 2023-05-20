@@ -2,7 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class Door : MonoBehaviour, IInteractable
+/*public class Door : MonoBehaviour, IInteractable
 {
     [SerializeField] private string prompt;
     [SerializeField] private TextMeshProUGUI _promptText;
@@ -54,4 +54,4 @@ public class Door : MonoBehaviour, IInteractable
             progressBar.isActive = false; // Set the progress bar to inactive
         }
     }
-}
+}*/
