@@ -74,15 +74,15 @@ public class AnimMovement : MonoBehaviour
 
     void handleAnimation()
     {
-        bool isWalking = animator.GetBool("isWalking");
+        bool walking = animator.GetBool("walking");
 
-        if(isMovementPressed && !isWalking)
+        if(isMovementPressed && !walking)
         {
-            animator.SetBool("isWalking", true);
+            animator.SetBool("walking", true);
         }
-        else if (!isMovementPressed && isWalking)
+        else if (!isMovementPressed && walking)
         {
-            animator.SetBool("isWalking", false);
+            animator.SetBool("walking", false);
         }
     }
 
@@ -90,7 +90,7 @@ public class AnimMovement : MonoBehaviour
     {
         handleAnimation();
         handleRotation();
-        characterController.Move(currentMovement * Time.deltaTime * 2.3f);
+        characterController.Move(currentMovement * Time.deltaTime * 2f);
     }
 
     void OnEnable()
