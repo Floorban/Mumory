@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PanelOpener : MonoBehaviour
 {
     public GameObject Panel;
@@ -13,10 +14,6 @@ public class PanelOpener : MonoBehaviour
         Panel.SetActive(false);
     }
 
-    private void OnTriggerEnter(Collider other) 
-    {
-        Button.SetActive(true);
-    }
 
     private void OnTriggerStay(Collider other)
     {
