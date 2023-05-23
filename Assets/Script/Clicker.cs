@@ -39,7 +39,7 @@ public class Clicker : MonoBehaviour
         GameObject target = null;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray.origin, ray.direction, out hit, 10))
+        if (Physics.Raycast(ray.origin, ray.direction, out hit, 1000))
         {
             if (!IsPointerOverUIObject())
             {

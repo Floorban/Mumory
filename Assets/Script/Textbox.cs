@@ -31,10 +31,10 @@ public class Textbox : MonoBehaviour
         NextSentence();
     }
 
-    void OnTriggerExit()
+    /*void OnTriggerExit()
     {
         DialogueText.text = string.Empty;
-    }
+    }*/
 
     void NextSentence()
     {
@@ -42,6 +42,7 @@ public class Textbox : MonoBehaviour
         {
             DialogueText.text = "";
             StartCoroutine(WriteSentence());
+            return;
         }
     }
 
