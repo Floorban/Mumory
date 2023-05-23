@@ -28,4 +28,5 @@ public class ManagerNPCUi : MonoBehaviour
         dist = Mathf.Clamp(dist, 0.1f, 2f);
         uiUse.transform.localScale = new Vector3(dist, dist, 0);
     }
+    
 }

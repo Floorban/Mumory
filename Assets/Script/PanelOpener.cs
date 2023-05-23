@@ -6,12 +6,14 @@ using UnityEngine;
 public class PanelOpener : MonoBehaviour
 {
     public GameObject Panel;
+    public GameObject Info;
     public GameObject Button;
 
     private void Start()
     {
         Button.SetActive(false);
         Panel.SetActive(false);
+        Info.SetActive(false);
     }
 
 
@@ -29,6 +31,7 @@ public class PanelOpener : MonoBehaviour
         {
             Button.SetActive(false);
             Panel.SetActive(false);
+             Info.SetActive(false);
         }
     }
 
@@ -38,6 +41,8 @@ public class PanelOpener : MonoBehaviour
         {
             bool isActive = Panel.activeSelf;
             Panel.SetActive(!isActive);
+            Info.SetActive(true);
         }
+
     }
 }

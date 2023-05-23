@@ -90,7 +90,7 @@ public class AnimMovement : MonoBehaviour
     {
         handleAnimation();
         handleRotation();
-        characterController.Move(currentMovement * Time.deltaTime * 2f);
+        characterController.Move(currentMovement * Time.deltaTime * 3f);
     }
 
     void OnEnable()
