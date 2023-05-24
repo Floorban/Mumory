@@ -34,11 +34,22 @@ public class PauseMenu : MonoBehaviour
         isPaused = false;
     }
 
-    public void GoToMainMenu(){
+    public void GoToClassroom(){
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Classroom");
+    }
+    public void GoToClinic(){
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Clinic");
+    }
+    public void GoToHallway(){
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Hallway");
+    }
+    public void GoToHome(){
         Time.timeScale = 1f;
         SceneManager.LoadScene("Home");
     }
-
     public void QuitGame(){
         Application.Quit();
     }
