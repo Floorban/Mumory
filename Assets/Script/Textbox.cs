@@ -31,10 +31,11 @@ public class Textbox : MonoBehaviour
         NextSentence();
     }
 
-    /*void OnTriggerExit()
+
+    void OnTriggerExit()
     {
         DialogueText.text = string.Empty;
-    }*/
+    }
 
     void NextSentence()
     {
