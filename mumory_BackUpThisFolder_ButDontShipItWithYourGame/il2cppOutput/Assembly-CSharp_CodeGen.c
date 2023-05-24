@@ -2507,219 +2507,221 @@ extern void Textbox_Start_m43C0AE82E33A074A8CE8C3910EC91186B8730F75 (void);
 extern void Textbox_Update_m936AD4E63655B415959E630252AC0A9E5679FB12 (void);
 // 0x000004E9 System.Void Textbox::OnTriggerEnter()
 extern void Textbox_OnTriggerEnter_mA0BBFCBB20F41DD4AAD1081A3BAF0F79A37B1C3B (void);
-// 0x000004EA System.Void Textbox::NextSentence()
+// 0x000004EA System.Void Textbox::OnTriggerExit()
+extern void Textbox_OnTriggerExit_mA9E2FC270077EF68182CDA24EA09F096B04A2D04 (void);
+// 0x000004EB System.Void Textbox::NextSentence()
 extern void Textbox_NextSentence_m29A482560AD4F65F905AEF63FFC25BC15F424A39 (void);
-// 0x000004EB System.Collections.IEnumerator Textbox::WriteSentence()
+// 0x000004EC System.Collections.IEnumerator Textbox::WriteSentence()
 extern void Textbox_WriteSentence_m4300CC150D123E139E41B727EAB5F55F680F22EE (void);
-// 0x000004EC System.Void Textbox::.ctor()
+// 0x000004ED System.Void Textbox::.ctor()
 extern void Textbox__ctor_mAD5B23C730939C6929396F72781BFF3CB9BBDDBC (void);
-// 0x000004ED System.Void Textbox/<WriteSentence>d__8::.ctor(System.Int32)
-extern void U3CWriteSentenceU3Ed__8__ctor_m799EC89A80B6A25469E0C47E427D3FC2DB769671 (void);
-// 0x000004EE System.Void Textbox/<WriteSentence>d__8::System.IDisposable.Dispose()
-extern void U3CWriteSentenceU3Ed__8_System_IDisposable_Dispose_mB88BC1ED7C394BDCCA2D3A806A7435D5DEE2BADA (void);
-// 0x000004EF System.Boolean Textbox/<WriteSentence>d__8::MoveNext()
-extern void U3CWriteSentenceU3Ed__8_MoveNext_mB34AD6A79AA37B0752682BA7614294C66A75CB83 (void);
-// 0x000004F0 System.Object Textbox/<WriteSentence>d__8::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CWriteSentenceU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mEFA455BB592AD2908450F74716DD518BE22C4521 (void);
-// 0x000004F1 System.Void Textbox/<WriteSentence>d__8::System.Collections.IEnumerator.Reset()
-extern void U3CWriteSentenceU3Ed__8_System_Collections_IEnumerator_Reset_m1726C374AC69F39FEB0580AE7869E37AE68940E0 (void);
-// 0x000004F2 System.Object Textbox/<WriteSentence>d__8::System.Collections.IEnumerator.get_Current()
-extern void U3CWriteSentenceU3Ed__8_System_Collections_IEnumerator_get_Current_m4C1E15C5CD5B7E97ABC36E0859ACDAB37D38D122 (void);
-// 0x000004F3 System.Void Touchable::Awake()
+// 0x000004EE System.Void Textbox/<WriteSentence>d__9::.ctor(System.Int32)
+extern void U3CWriteSentenceU3Ed__9__ctor_m37CF41F5B7D56B3A3109619B369D9153D9BBD14C (void);
+// 0x000004EF System.Void Textbox/<WriteSentence>d__9::System.IDisposable.Dispose()
+extern void U3CWriteSentenceU3Ed__9_System_IDisposable_Dispose_m5CBB3A6985DAC7D65093D1EE789D59FCEAA00E6D (void);
+// 0x000004F0 System.Boolean Textbox/<WriteSentence>d__9::MoveNext()
+extern void U3CWriteSentenceU3Ed__9_MoveNext_mD040537C7DE9896F2A6FECABEED0B05580E022FD (void);
+// 0x000004F1 System.Object Textbox/<WriteSentence>d__9::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CWriteSentenceU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m9133EC54FA831DAB9638322B9CAE3FD13AB02934 (void);
+// 0x000004F2 System.Void Textbox/<WriteSentence>d__9::System.Collections.IEnumerator.Reset()
+extern void U3CWriteSentenceU3Ed__9_System_Collections_IEnumerator_Reset_mDF21E694D317B7EDAAF902DB1D91D03B6D46C139 (void);
+// 0x000004F3 System.Object Textbox/<WriteSentence>d__9::System.Collections.IEnumerator.get_Current()
+extern void U3CWriteSentenceU3Ed__9_System_Collections_IEnumerator_get_Current_m8AE9C60938C77B9CBFC3C755374B23B98C69DD5C (void);
+// 0x000004F4 System.Void Touchable::Awake()
 extern void Touchable_Awake_m6A9B34C1F30421AFEFBF86DB17B139EB73CF503E (void);
-// 0x000004F4 System.Void Touchable::.ctor()
+// 0x000004F5 System.Void Touchable::.ctor()
 extern void Touchable__ctor_mD91988E376F431249C67D85BFAFBC77F2496350F (void);
-// 0x000004F5 System.Void ClickerBehavior::Start()
+// 0x000004F6 System.Void ClickerBehavior::Start()
 extern void ClickerBehavior_Start_mD822774BAA74558C83B7C1EB9D5913307B5100D5 (void);
-// 0x000004F6 System.Void ClickerBehavior::Update()
+// 0x000004F7 System.Void ClickerBehavior::Update()
 extern void ClickerBehavior_Update_m5D1815F0DA13795C5E23A06C4161B3AFC5DC69AF (void);
-// 0x000004F7 System.Void ClickerBehavior::BarChange(System.Single)
+// 0x000004F8 System.Void ClickerBehavior::BarChange(System.Single)
 extern void ClickerBehavior_BarChange_mE3B3117363796D59C971CCF68DBCB7CE31C21AB0 (void);
-// 0x000004F8 System.Void ClickerBehavior::Timer()
+// 0x000004F9 System.Void ClickerBehavior::Timer()
 extern void ClickerBehavior_Timer_m63F7F1DEB620F6F9F8A3FE24B37F3CAAF898B702 (void);
-// 0x000004F9 System.Void ClickerBehavior::IncrementValue()
+// 0x000004FA System.Void ClickerBehavior::IncrementValue()
 extern void ClickerBehavior_IncrementValue_m53F761AF6DE21DECC3466D7FCBD0643907232F7E (void);
-// 0x000004FA System.Void ClickerBehavior::ScaleUpDown(UnityEngine.GameObject)
+// 0x000004FB System.Void ClickerBehavior::ScaleUpDown(UnityEngine.GameObject)
 extern void ClickerBehavior_ScaleUpDown_mA318199D37C85095681B023521E9233311405E7D (void);
-// 0x000004FB System.Void ClickerBehavior::.ctor()
+// 0x000004FC System.Void ClickerBehavior::.ctor()
 extern void ClickerBehavior__ctor_m8C70E4DDD020ECE0F74FDC3C0C87CB6670FAD870 (void);
-// 0x000004FC System.Void ClickerBehavior/<>c__DisplayClass16_0::.ctor()
+// 0x000004FD System.Void ClickerBehavior/<>c__DisplayClass16_0::.ctor()
 extern void U3CU3Ec__DisplayClass16_0__ctor_mCD7ED44F18C035509D19DFB4A5A18E5C2FCCA98A (void);
-// 0x000004FD System.Void ClickerBehavior/<>c__DisplayClass16_0::<ScaleUpDown>g__ScaleDown|0()
+// 0x000004FE System.Void ClickerBehavior/<>c__DisplayClass16_0::<ScaleUpDown>g__ScaleDown|0()
 extern void U3CU3Ec__DisplayClass16_0_U3CScaleUpDownU3Eg__ScaleDownU7C0_m53655B8E588D7D920EC25607D10AFEC0BADD737A (void);
-// 0x000004FE System.Void DentedPixel.LeanDummy::.ctor()
+// 0x000004FF System.Void DentedPixel.LeanDummy::.ctor()
 extern void LeanDummy__ctor_mAD97A9FAAAF771BEC38CA22F2CBA2DBA31E609CC (void);
-// 0x000004FF System.Void DentedPixel.LTExamples.PathBezier::OnEnable()
+// 0x00000500 System.Void DentedPixel.LTExamples.PathBezier::OnEnable()
 extern void PathBezier_OnEnable_mAC0020AD7B5CC064E51D9A9F0DA289FA78C047A4 (void);
-// 0x00000500 System.Void DentedPixel.LTExamples.PathBezier::Start()
+// 0x00000501 System.Void DentedPixel.LTExamples.PathBezier::Start()
 extern void PathBezier_Start_m607A4E08667177142CEC300DF842B85FDC043893 (void);
-// 0x00000501 System.Void DentedPixel.LTExamples.PathBezier::Update()
+// 0x00000502 System.Void DentedPixel.LTExamples.PathBezier::Update()
 extern void PathBezier_Update_m25E59122C6257595AC61537F69B880467F5F4227 (void);
-// 0x00000502 System.Void DentedPixel.LTExamples.PathBezier::OnDrawGizmos()
+// 0x00000503 System.Void DentedPixel.LTExamples.PathBezier::OnDrawGizmos()
 extern void PathBezier_OnDrawGizmos_mF51C8AEC078CA81915D0209921ACE021F0035659 (void);
-// 0x00000503 System.Void DentedPixel.LTExamples.PathBezier::.ctor()
+// 0x00000504 System.Void DentedPixel.LTExamples.PathBezier::.ctor()
 extern void PathBezier__ctor_m16DC250550583E9763A21CBA5B1132F89248FDF6 (void);
-// 0x00000504 System.Void DentedPixel.LTExamples.TestingUnitTests::Awake()
+// 0x00000505 System.Void DentedPixel.LTExamples.TestingUnitTests::Awake()
 extern void TestingUnitTests_Awake_m1AF8DC4E0F39711CC364185BB203AEF2715E14DE (void);
-// 0x00000505 System.Void DentedPixel.LTExamples.TestingUnitTests::Start()
+// 0x00000506 System.Void DentedPixel.LTExamples.TestingUnitTests::Start()
 extern void TestingUnitTests_Start_m3E4D344259922853AB09F7874A9484F72107CB79 (void);
-// 0x00000506 UnityEngine.GameObject DentedPixel.LTExamples.TestingUnitTests::cubeNamed(System.String)
+// 0x00000507 UnityEngine.GameObject DentedPixel.LTExamples.TestingUnitTests::cubeNamed(System.String)
 extern void TestingUnitTests_cubeNamed_m199BC7E02191886B301165CA76DA3E655B3CE757 (void);
-// 0x00000507 System.Collections.IEnumerator DentedPixel.LTExamples.TestingUnitTests::timeBasedTesting()
+// 0x00000508 System.Collections.IEnumerator DentedPixel.LTExamples.TestingUnitTests::timeBasedTesting()
 extern void TestingUnitTests_timeBasedTesting_m643106C167C87E17B149F898DB613834E1B5045C (void);
-// 0x00000508 System.Collections.IEnumerator DentedPixel.LTExamples.TestingUnitTests::lotsOfCancels()
+// 0x00000509 System.Collections.IEnumerator DentedPixel.LTExamples.TestingUnitTests::lotsOfCancels()
 extern void TestingUnitTests_lotsOfCancels_m4FBC65B1A8D408238BF63F1B09563148AF10535F (void);
-// 0x00000509 System.Collections.IEnumerator DentedPixel.LTExamples.TestingUnitTests::pauseTimeNow()
+// 0x0000050A System.Collections.IEnumerator DentedPixel.LTExamples.TestingUnitTests::pauseTimeNow()
 extern void TestingUnitTests_pauseTimeNow_mEF5D730F8C5EE441D1062BAFAE37B52B60A07CA4 (void);
-// 0x0000050A System.Void DentedPixel.LTExamples.TestingUnitTests::rotateRepeatFinished()
+// 0x0000050B System.Void DentedPixel.LTExamples.TestingUnitTests::rotateRepeatFinished()
 extern void TestingUnitTests_rotateRepeatFinished_mC5FDBBB990298AE41AC70813F49D41FB5E305FF0 (void);
-// 0x0000050B System.Void DentedPixel.LTExamples.TestingUnitTests::rotateRepeatAllFinished()
+// 0x0000050C System.Void DentedPixel.LTExamples.TestingUnitTests::rotateRepeatAllFinished()
 extern void TestingUnitTests_rotateRepeatAllFinished_m6CC8B55733E2969A9846EC812ADC46A2CD5168A4 (void);
-// 0x0000050C System.Void DentedPixel.LTExamples.TestingUnitTests::eventGameObjectCalled(LTEvent)
+// 0x0000050D System.Void DentedPixel.LTExamples.TestingUnitTests::eventGameObjectCalled(LTEvent)
 extern void TestingUnitTests_eventGameObjectCalled_m9EEA683D23440D02E54E647209555EC53086A75D (void);
-// 0x0000050D System.Void DentedPixel.LTExamples.TestingUnitTests::eventGeneralCalled(LTEvent)
+// 0x0000050E System.Void DentedPixel.LTExamples.TestingUnitTests::eventGeneralCalled(LTEvent)
 extern void TestingUnitTests_eventGeneralCalled_m31621F7924D6EE299D9C88CB4E3CC89F320E2756 (void);
-// 0x0000050E System.Void DentedPixel.LTExamples.TestingUnitTests::.ctor()
+// 0x0000050F System.Void DentedPixel.LTExamples.TestingUnitTests::.ctor()
 extern void TestingUnitTests__ctor_m8A1242AE5896B6BB8A253B2418A787E67AD75336 (void);
-// 0x0000050F System.Void DentedPixel.LTExamples.TestingUnitTests::<lotsOfCancels>b__25_0()
+// 0x00000510 System.Void DentedPixel.LTExamples.TestingUnitTests::<lotsOfCancels>b__25_0()
 extern void TestingUnitTests_U3ClotsOfCancelsU3Eb__25_0_m812572CC5A7417D7817D6C6FFEBDFF51B4A0FA41 (void);
-// 0x00000510 System.Void DentedPixel.LTExamples.TestingUnitTests::<pauseTimeNow>b__26_1()
+// 0x00000511 System.Void DentedPixel.LTExamples.TestingUnitTests::<pauseTimeNow>b__26_1()
 extern void TestingUnitTests_U3CpauseTimeNowU3Eb__26_1_mAC946ADD4113F6048D60D5CEEEE1738E0164D078 (void);
-// 0x00000511 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::.ctor()
+// 0x00000512 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::.ctor()
 extern void U3CU3Ec__DisplayClass22_0__ctor_mFE1E23694082DC032B4268FF8BE68F2D090F3319 (void);
-// 0x00000512 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__0()
+// 0x00000513 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__0()
 extern void U3CU3Ec__DisplayClass22_0_U3CStartU3Eb__0_mE5320DA9ED810667A987655705F3DF06266D9722 (void);
-// 0x00000513 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__1()
+// 0x00000514 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__1()
 extern void U3CU3Ec__DisplayClass22_0_U3CStartU3Eb__1_m597CD7FFD5D2E501786671B95833F29219BAD77F (void);
-// 0x00000514 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__21()
+// 0x00000515 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__21()
 extern void U3CU3Ec__DisplayClass22_0_U3CStartU3Eb__21_mB7C01C0D3BCC62A09624DF06290AAF93B4BD00BF (void);
-// 0x00000515 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__2()
+// 0x00000516 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__2()
 extern void U3CU3Ec__DisplayClass22_0_U3CStartU3Eb__2_m5568CF08336E8FE1A943B9C465F34A423899C651 (void);
-// 0x00000516 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__4()
+// 0x00000517 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__4()
 extern void U3CU3Ec__DisplayClass22_0_U3CStartU3Eb__4_m7A0E1AFA8BD74E7CE4C7CE2336A8C648CC107510 (void);
-// 0x00000517 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__5()
+// 0x00000518 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__5()
 extern void U3CU3Ec__DisplayClass22_0_U3CStartU3Eb__5_m712D6323A790B02AFC6C065B1FEFF8FDA995B4F3 (void);
-// 0x00000518 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__6()
+// 0x00000519 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__6()
 extern void U3CU3Ec__DisplayClass22_0_U3CStartU3Eb__6_m2A99D5DD5AFE72A093D6D44C6FCE1A4A99140043 (void);
-// 0x00000519 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__8()
+// 0x0000051A System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__8()
 extern void U3CU3Ec__DisplayClass22_0_U3CStartU3Eb__8_m1BCDCBA11C9746AC8FB1112DAA19D418E93D5BC3 (void);
-// 0x0000051A System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__9()
+// 0x0000051B System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__9()
 extern void U3CU3Ec__DisplayClass22_0_U3CStartU3Eb__9_mDAB62D3CA8CC97451937BD2386EDA7C9C4AE5E76 (void);
-// 0x0000051B System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__10()
+// 0x0000051C System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__10()
 extern void U3CU3Ec__DisplayClass22_0_U3CStartU3Eb__10_m7A060B8EF4E01CB8658BF891F29F1A252FDA3C25 (void);
-// 0x0000051C System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__11()
+// 0x0000051D System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__11()
 extern void U3CU3Ec__DisplayClass22_0_U3CStartU3Eb__11_m43D416286D0536E09100BD2C2903F942A72C8ABF (void);
-// 0x0000051D System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__13(System.Object)
+// 0x0000051E System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__13(System.Object)
 extern void U3CU3Ec__DisplayClass22_0_U3CStartU3Eb__13_m88FA84C0554930011DBCAFBC1F26F12EE17BDBCA (void);
-// 0x0000051E System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__14()
+// 0x0000051F System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__14()
 extern void U3CU3Ec__DisplayClass22_0_U3CStartU3Eb__14_m96A545CB2C78AE3C18418F174FC6EBEF0B207AAF (void);
-// 0x0000051F System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__15()
+// 0x00000520 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__15()
 extern void U3CU3Ec__DisplayClass22_0_U3CStartU3Eb__15_m4F81AD87373C27F03335A187ABDDED0559DEDD5C (void);
-// 0x00000520 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__16()
+// 0x00000521 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__16()
 extern void U3CU3Ec__DisplayClass22_0_U3CStartU3Eb__16_m0B49364234504739A35362276F65B9AFA70C748C (void);
-// 0x00000521 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__17()
+// 0x00000522 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__17()
 extern void U3CU3Ec__DisplayClass22_0_U3CStartU3Eb__17_m4AE5CD03B4DD11FAD9FAB83B29F07F8918C36926 (void);
-// 0x00000522 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__19(UnityEngine.Vector2)
+// 0x00000523 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__19(UnityEngine.Vector2)
 extern void U3CU3Ec__DisplayClass22_0_U3CStartU3Eb__19_mAA97594FDD3C5F4BCF9AB2EC9EC33DF4298DA7C2 (void);
-// 0x00000523 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__20()
+// 0x00000524 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_0::<Start>b__20()
 extern void U3CU3Ec__DisplayClass22_0_U3CStartU3Eb__20_m39AA1E821B542522AFD93433010C1E3BFD6922F3 (void);
-// 0x00000524 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_1::.ctor()
+// 0x00000525 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_1::.ctor()
 extern void U3CU3Ec__DisplayClass22_1__ctor_m432D6B14D0A56F4438A23C0441CC0A08F87B967A (void);
-// 0x00000525 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_1::<Start>b__23()
+// 0x00000526 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_1::<Start>b__23()
 extern void U3CU3Ec__DisplayClass22_1_U3CStartU3Eb__23_m75228A1FD39765C7D84D67FF671BA6034D6C8563 (void);
-// 0x00000526 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_2::.ctor()
+// 0x00000527 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_2::.ctor()
 extern void U3CU3Ec__DisplayClass22_2__ctor_m0FB67E2136699A80C47A405A58B5C8A4E89B13FB (void);
-// 0x00000527 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_2::<Start>b__24(System.Object)
+// 0x00000528 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass22_2::<Start>b__24(System.Object)
 extern void U3CU3Ec__DisplayClass22_2_U3CStartU3Eb__24_mB7F2C95C786613512C897915CDCFA186BEEF92FD (void);
-// 0x00000528 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c::.cctor()
+// 0x00000529 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c::.cctor()
 extern void U3CU3Ec__cctor_m7ADB6A66E6602DBF151041D23F3D5FF45FBD56E1 (void);
-// 0x00000529 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c::.ctor()
+// 0x0000052A System.Void DentedPixel.LTExamples.TestingUnitTests/<>c::.ctor()
 extern void U3CU3Ec__ctor_m0CE961CFC8968D0059ABDB2542DD3370B480DA81 (void);
-// 0x0000052A System.Void DentedPixel.LTExamples.TestingUnitTests/<>c::<Start>b__22_3()
+// 0x0000052B System.Void DentedPixel.LTExamples.TestingUnitTests/<>c::<Start>b__22_3()
 extern void U3CU3Ec_U3CStartU3Eb__22_3_mEEC10EC0D25069E9C9335833D90249419A9B1F27 (void);
-// 0x0000052B System.Void DentedPixel.LTExamples.TestingUnitTests/<>c::<Start>b__22_22()
+// 0x0000052C System.Void DentedPixel.LTExamples.TestingUnitTests/<>c::<Start>b__22_22()
 extern void U3CU3Ec_U3CStartU3Eb__22_22_m31BA5E285B55BE917261CD539AFBDFE4C1948C47 (void);
-// 0x0000052C System.Void DentedPixel.LTExamples.TestingUnitTests/<>c::<Start>b__22_7()
+// 0x0000052D System.Void DentedPixel.LTExamples.TestingUnitTests/<>c::<Start>b__22_7()
 extern void U3CU3Ec_U3CStartU3Eb__22_7_mF7DB938C12D3496BCF420ABF98E56D8E0B430227 (void);
-// 0x0000052D System.Void DentedPixel.LTExamples.TestingUnitTests/<>c::<Start>b__22_12(System.Single)
+// 0x0000052E System.Void DentedPixel.LTExamples.TestingUnitTests/<>c::<Start>b__22_12(System.Single)
 extern void U3CU3Ec_U3CStartU3Eb__22_12_mC1778F6233406071D3B78DD574C8B5C0A93D2136 (void);
-// 0x0000052E System.Void DentedPixel.LTExamples.TestingUnitTests/<>c::<Start>b__22_18()
+// 0x0000052F System.Void DentedPixel.LTExamples.TestingUnitTests/<>c::<Start>b__22_18()
 extern void U3CU3Ec_U3CStartU3Eb__22_18_mBE5FF3107F23ECD5A6281246AF72B5E3978C2BCD (void);
-// 0x0000052F System.Void DentedPixel.LTExamples.TestingUnitTests/<>c::<pauseTimeNow>b__26_0()
+// 0x00000530 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c::<pauseTimeNow>b__26_0()
 extern void U3CU3Ec_U3CpauseTimeNowU3Eb__26_0_mECFBEC59A521E300ACE8CB318A9F373453AC6C59 (void);
-// 0x00000530 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::.ctor()
+// 0x00000531 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::.ctor()
 extern void U3CU3Ec__DisplayClass24_0__ctor_m0CD08FE0DA3BAB045DC6184178E8F3BE4225CEED (void);
-// 0x00000531 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__0()
+// 0x00000532 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__0()
 extern void U3CU3Ec__DisplayClass24_0_U3CtimeBasedTestingU3Eb__0_m3C81AE0DF5A28672183C0F60416FAD0B04FCDDA3 (void);
-// 0x00000532 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__1()
+// 0x00000533 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__1()
 extern void U3CU3Ec__DisplayClass24_0_U3CtimeBasedTestingU3Eb__1_mBD179C09F46512BEE0DFDAF50D29CD394037EA65 (void);
-// 0x00000533 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__2(System.Single)
+// 0x00000534 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__2(System.Single)
 extern void U3CU3Ec__DisplayClass24_0_U3CtimeBasedTestingU3Eb__2_m2B7C4499FE1931539498977A170EEB9A7F60660A (void);
-// 0x00000534 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__3()
+// 0x00000535 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__3()
 extern void U3CU3Ec__DisplayClass24_0_U3CtimeBasedTestingU3Eb__3_m4DE8C0FD17093B06BCA12256DA89037A495ECCD9 (void);
-// 0x00000535 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__4()
+// 0x00000536 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__4()
 extern void U3CU3Ec__DisplayClass24_0_U3CtimeBasedTestingU3Eb__4_m1CD32860C02BE0ADDF42FC94E34AF405C8D4C974 (void);
-// 0x00000536 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__5()
+// 0x00000537 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__5()
 extern void U3CU3Ec__DisplayClass24_0_U3CtimeBasedTestingU3Eb__5_m42797CFD96E143D53E0783F2F8483EA0CE97368B (void);
-// 0x00000537 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__6(System.Single)
+// 0x00000538 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__6(System.Single)
 extern void U3CU3Ec__DisplayClass24_0_U3CtimeBasedTestingU3Eb__6_m0F31DE3FBD71765B531814A1350F6ACA6640F3E8 (void);
-// 0x00000538 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__7()
+// 0x00000539 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__7()
 extern void U3CU3Ec__DisplayClass24_0_U3CtimeBasedTestingU3Eb__7_m09D87D41176827D5C6424B7FE6ED28F4FDB2AB8C (void);
-// 0x00000539 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__13()
+// 0x0000053A System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__13()
 extern void U3CU3Ec__DisplayClass24_0_U3CtimeBasedTestingU3Eb__13_m6004E6DF2343EE61487089FC52718B0DC801C101 (void);
-// 0x0000053A System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__14(UnityEngine.Vector3)
+// 0x0000053B System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__14(UnityEngine.Vector3)
 extern void U3CU3Ec__DisplayClass24_0_U3CtimeBasedTestingU3Eb__14_mAD0DA3EE764E4C92DCF708DFB4B4F18E212EA10B (void);
-// 0x0000053B System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__15(System.Object)
+// 0x0000053C System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__15(System.Object)
 extern void U3CU3Ec__DisplayClass24_0_U3CtimeBasedTestingU3Eb__15_mD45149DAAB450A0410343C5C76A44644270A785C (void);
-// 0x0000053C System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__16()
+// 0x0000053D System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__16()
 extern void U3CU3Ec__DisplayClass24_0_U3CtimeBasedTestingU3Eb__16_mA0288FB1999F27BA5423076D750C5AC3CCA1C010 (void);
-// 0x0000053D System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__8()
+// 0x0000053E System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__8()
 extern void U3CU3Ec__DisplayClass24_0_U3CtimeBasedTestingU3Eb__8_mF39CAD62615F14008EDB2A29A97FD6597E78B432 (void);
-// 0x0000053E System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__9(System.Single)
+// 0x0000053F System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__9(System.Single)
 extern void U3CU3Ec__DisplayClass24_0_U3CtimeBasedTestingU3Eb__9_mA072EF44CBF40A9073C742EBC2F083129403081D (void);
-// 0x0000053F System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__10()
+// 0x00000540 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__10()
 extern void U3CU3Ec__DisplayClass24_0_U3CtimeBasedTestingU3Eb__10_mD39918FB3C70BEBF5740CD0B3C68FC027056589A (void);
-// 0x00000540 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__11(UnityEngine.Vector3)
+// 0x00000541 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__11(UnityEngine.Vector3)
 extern void U3CU3Ec__DisplayClass24_0_U3CtimeBasedTestingU3Eb__11_m41811F2732FBAF81F06F69C5A9AEFD4983E78832 (void);
-// 0x00000541 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__12()
+// 0x00000542 System.Void DentedPixel.LTExamples.TestingUnitTests/<>c__DisplayClass24_0::<timeBasedTesting>b__12()
 extern void U3CU3Ec__DisplayClass24_0_U3CtimeBasedTestingU3Eb__12_mA6FEA2C1C85F36CE0BA636A36927B78AB9C102FB (void);
-// 0x00000542 System.Void DentedPixel.LTExamples.TestingUnitTests/<timeBasedTesting>d__24::.ctor(System.Int32)
+// 0x00000543 System.Void DentedPixel.LTExamples.TestingUnitTests/<timeBasedTesting>d__24::.ctor(System.Int32)
 extern void U3CtimeBasedTestingU3Ed__24__ctor_m2EB75673980849AA4335899F9F996A3AF6F45B0C (void);
-// 0x00000543 System.Void DentedPixel.LTExamples.TestingUnitTests/<timeBasedTesting>d__24::System.IDisposable.Dispose()
+// 0x00000544 System.Void DentedPixel.LTExamples.TestingUnitTests/<timeBasedTesting>d__24::System.IDisposable.Dispose()
 extern void U3CtimeBasedTestingU3Ed__24_System_IDisposable_Dispose_m017747BA79A75615D4F1526AEB035CA84FBB6925 (void);
-// 0x00000544 System.Boolean DentedPixel.LTExamples.TestingUnitTests/<timeBasedTesting>d__24::MoveNext()
+// 0x00000545 System.Boolean DentedPixel.LTExamples.TestingUnitTests/<timeBasedTesting>d__24::MoveNext()
 extern void U3CtimeBasedTestingU3Ed__24_MoveNext_m360F24A4AA8133F3D63C678E4292EC6D0D20690C (void);
-// 0x00000545 System.Object DentedPixel.LTExamples.TestingUnitTests/<timeBasedTesting>d__24::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000546 System.Object DentedPixel.LTExamples.TestingUnitTests/<timeBasedTesting>d__24::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CtimeBasedTestingU3Ed__24_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m86016DF1CDA96FEB572B90DB54FDE5509A8AF772 (void);
-// 0x00000546 System.Void DentedPixel.LTExamples.TestingUnitTests/<timeBasedTesting>d__24::System.Collections.IEnumerator.Reset()
+// 0x00000547 System.Void DentedPixel.LTExamples.TestingUnitTests/<timeBasedTesting>d__24::System.Collections.IEnumerator.Reset()
 extern void U3CtimeBasedTestingU3Ed__24_System_Collections_IEnumerator_Reset_m383923EFB4218742F8C7F7123089DA65AC39815C (void);
-// 0x00000547 System.Object DentedPixel.LTExamples.TestingUnitTests/<timeBasedTesting>d__24::System.Collections.IEnumerator.get_Current()
+// 0x00000548 System.Object DentedPixel.LTExamples.TestingUnitTests/<timeBasedTesting>d__24::System.Collections.IEnumerator.get_Current()
 extern void U3CtimeBasedTestingU3Ed__24_System_Collections_IEnumerator_get_Current_m8E7679D5BCBA0A24290C8886607D9FA648CC78E3 (void);
-// 0x00000548 System.Void DentedPixel.LTExamples.TestingUnitTests/<lotsOfCancels>d__25::.ctor(System.Int32)
+// 0x00000549 System.Void DentedPixel.LTExamples.TestingUnitTests/<lotsOfCancels>d__25::.ctor(System.Int32)
 extern void U3ClotsOfCancelsU3Ed__25__ctor_m318DA99026EAD0DD05B02818C0B0FA29907E6A05 (void);
-// 0x00000549 System.Void DentedPixel.LTExamples.TestingUnitTests/<lotsOfCancels>d__25::System.IDisposable.Dispose()
+// 0x0000054A System.Void DentedPixel.LTExamples.TestingUnitTests/<lotsOfCancels>d__25::System.IDisposable.Dispose()
 extern void U3ClotsOfCancelsU3Ed__25_System_IDisposable_Dispose_m2903B55B29D1D6443E04D266A6F9C29B7D623A46 (void);
-// 0x0000054A System.Boolean DentedPixel.LTExamples.TestingUnitTests/<lotsOfCancels>d__25::MoveNext()
+// 0x0000054B System.Boolean DentedPixel.LTExamples.TestingUnitTests/<lotsOfCancels>d__25::MoveNext()
 extern void U3ClotsOfCancelsU3Ed__25_MoveNext_m5A6D23E9E5FEAAAF54A2C3867509F4FC33E82E5B (void);
-// 0x0000054B System.Object DentedPixel.LTExamples.TestingUnitTests/<lotsOfCancels>d__25::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x0000054C System.Object DentedPixel.LTExamples.TestingUnitTests/<lotsOfCancels>d__25::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3ClotsOfCancelsU3Ed__25_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD1F99AAE22AAD291E176512C1876D8F4D8A469C5 (void);
-// 0x0000054C System.Void DentedPixel.LTExamples.TestingUnitTests/<lotsOfCancels>d__25::System.Collections.IEnumerator.Reset()
+// 0x0000054D System.Void DentedPixel.LTExamples.TestingUnitTests/<lotsOfCancels>d__25::System.Collections.IEnumerator.Reset()
 extern void U3ClotsOfCancelsU3Ed__25_System_Collections_IEnumerator_Reset_mDC3A064B003EEF2CB3E2C806EEA804A34F2F88ED (void);
-// 0x0000054D System.Object DentedPixel.LTExamples.TestingUnitTests/<lotsOfCancels>d__25::System.Collections.IEnumerator.get_Current()
+// 0x0000054E System.Object DentedPixel.LTExamples.TestingUnitTests/<lotsOfCancels>d__25::System.Collections.IEnumerator.get_Current()
 extern void U3ClotsOfCancelsU3Ed__25_System_Collections_IEnumerator_get_Current_m67668600B8384D7603249DA11742478DBC0ACC86 (void);
-// 0x0000054E System.Void DentedPixel.LTExamples.TestingUnitTests/<pauseTimeNow>d__26::.ctor(System.Int32)
+// 0x0000054F System.Void DentedPixel.LTExamples.TestingUnitTests/<pauseTimeNow>d__26::.ctor(System.Int32)
 extern void U3CpauseTimeNowU3Ed__26__ctor_m6DC5D66AD04AB76AA507AA7992623BB4F98CE72F (void);
-// 0x0000054F System.Void DentedPixel.LTExamples.TestingUnitTests/<pauseTimeNow>d__26::System.IDisposable.Dispose()
+// 0x00000550 System.Void DentedPixel.LTExamples.TestingUnitTests/<pauseTimeNow>d__26::System.IDisposable.Dispose()
 extern void U3CpauseTimeNowU3Ed__26_System_IDisposable_Dispose_m9BDF70F1B18DA0CB218DC35F1837BD530F7A2012 (void);
-// 0x00000550 System.Boolean DentedPixel.LTExamples.TestingUnitTests/<pauseTimeNow>d__26::MoveNext()
+// 0x00000551 System.Boolean DentedPixel.LTExamples.TestingUnitTests/<pauseTimeNow>d__26::MoveNext()
 extern void U3CpauseTimeNowU3Ed__26_MoveNext_mD1899B5547854B1730737F4A1B33BA10E99BB63F (void);
-// 0x00000551 System.Object DentedPixel.LTExamples.TestingUnitTests/<pauseTimeNow>d__26::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000552 System.Object DentedPixel.LTExamples.TestingUnitTests/<pauseTimeNow>d__26::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CpauseTimeNowU3Ed__26_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE3D6654D5CE0AF9610DA36722D48733FF34F1985 (void);
-// 0x00000552 System.Void DentedPixel.LTExamples.TestingUnitTests/<pauseTimeNow>d__26::System.Collections.IEnumerator.Reset()
+// 0x00000553 System.Void DentedPixel.LTExamples.TestingUnitTests/<pauseTimeNow>d__26::System.Collections.IEnumerator.Reset()
 extern void U3CpauseTimeNowU3Ed__26_System_Collections_IEnumerator_Reset_mE6434510FED0AFDB14A7D1A04FF20AE4AE193DE7 (void);
-// 0x00000553 System.Object DentedPixel.LTExamples.TestingUnitTests/<pauseTimeNow>d__26::System.Collections.IEnumerator.get_Current()
+// 0x00000554 System.Object DentedPixel.LTExamples.TestingUnitTests/<pauseTimeNow>d__26::System.Collections.IEnumerator.get_Current()
 extern void U3CpauseTimeNowU3Ed__26_System_Collections_IEnumerator_get_Current_m8AE5D84EAB194FB9890355A069D68F0DDC442E4E (void);
-static Il2CppMethodPointer s_methodPointers[1363] = 
+static Il2CppMethodPointer s_methodPointers[1364] = 
 {
 	PlayerControls_get_asset_mF8BF9F6394D11704AF249BD540F07F6D5B6FEF32,
 	PlayerControls__ctor_m332F79A4E651845074B3ABFAEF8F6F3604244309,
@@ -3978,15 +3980,16 @@ static Il2CppMethodPointer s_methodPointers[1363] =
 	Textbox_Start_m43C0AE82E33A074A8CE8C3910EC91186B8730F75,
 	Textbox_Update_m936AD4E63655B415959E630252AC0A9E5679FB12,
 	Textbox_OnTriggerEnter_mA0BBFCBB20F41DD4AAD1081A3BAF0F79A37B1C3B,
+	Textbox_OnTriggerExit_mA9E2FC270077EF68182CDA24EA09F096B04A2D04,
 	Textbox_NextSentence_m29A482560AD4F65F905AEF63FFC25BC15F424A39,
 	Textbox_WriteSentence_m4300CC150D123E139E41B727EAB5F55F680F22EE,
 	Textbox__ctor_mAD5B23C730939C6929396F72781BFF3CB9BBDDBC,
-	U3CWriteSentenceU3Ed__8__ctor_m799EC89A80B6A25469E0C47E427D3FC2DB769671,
-	U3CWriteSentenceU3Ed__8_System_IDisposable_Dispose_mB88BC1ED7C394BDCCA2D3A806A7435D5DEE2BADA,
-	U3CWriteSentenceU3Ed__8_MoveNext_mB34AD6A79AA37B0752682BA7614294C66A75CB83,
-	U3CWriteSentenceU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mEFA455BB592AD2908450F74716DD518BE22C4521,
-	U3CWriteSentenceU3Ed__8_System_Collections_IEnumerator_Reset_m1726C374AC69F39FEB0580AE7869E37AE68940E0,
-	U3CWriteSentenceU3Ed__8_System_Collections_IEnumerator_get_Current_m4C1E15C5CD5B7E97ABC36E0859ACDAB37D38D122,
+	U3CWriteSentenceU3Ed__9__ctor_m37CF41F5B7D56B3A3109619B369D9153D9BBD14C,
+	U3CWriteSentenceU3Ed__9_System_IDisposable_Dispose_m5CBB3A6985DAC7D65093D1EE789D59FCEAA00E6D,
+	U3CWriteSentenceU3Ed__9_MoveNext_mD040537C7DE9896F2A6FECABEED0B05580E022FD,
+	U3CWriteSentenceU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m9133EC54FA831DAB9638322B9CAE3FD13AB02934,
+	U3CWriteSentenceU3Ed__9_System_Collections_IEnumerator_Reset_mDF21E694D317B7EDAAF902DB1D91D03B6D46C139,
+	U3CWriteSentenceU3Ed__9_System_Collections_IEnumerator_get_Current_m8AE9C60938C77B9CBFC3C755374B23B98C69DD5C,
 	Touchable_Awake_m6A9B34C1F30421AFEFBF86DB17B139EB73CF503E,
 	Touchable__ctor_mD91988E376F431249C67D85BFAFBC77F2496350F,
 	ClickerBehavior_Start_mD822774BAA74558C83B7C1EB9D5913307B5100D5,
@@ -4140,7 +4143,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[26] =
 	{ 0x060004AA, CharacterControlsActions_get_enabled_m6C137A89F6E00B99630ED1A468E9B26E28B487DD_AdjustorThunk },
 	{ 0x060004AC, CharacterControlsActions_SetCallbacks_mEF4BDA37CB9248266E378FA6032FA2FBB25B14D8_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[1363] = 
+static const int32_t s_InvokerIndices[1364] = 
 {
 	8410,
 	8569,
@@ -5400,6 +5403,7 @@ static const int32_t s_InvokerIndices[1363] =
 	8569,
 	8569,
 	8569,
+	8569,
 	8410,
 	8569,
 	6762,
@@ -5510,7 +5514,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	1363,
+	1364,
 	s_methodPointers,
 	26,
 	s_adjustorThunks,

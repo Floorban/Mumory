@@ -5706,20 +5706,20 @@ struct U3CDelayedMaterialRebuildU3Ed__19_t861CD33D0F1735F4938A49DBEC83A7AA1AA062
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___U3CU3E4__this_2;
 };
 
-// Textbox/<WriteSentence>d__8
-struct U3CWriteSentenceU3Ed__8_tD0E643F9111EAA7B5745629128C7589A3FA293A2  : public RuntimeObject
+// Textbox/<WriteSentence>d__9
+struct U3CWriteSentenceU3Ed__9_tAD9A31F79F49048EBB63A2CEA8360C4C438D72DA  : public RuntimeObject
 {
-	// System.Int32 Textbox/<WriteSentence>d__8::<>1__state
+	// System.Int32 Textbox/<WriteSentence>d__9::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object Textbox/<WriteSentence>d__8::<>2__current
+	// System.Object Textbox/<WriteSentence>d__9::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// Textbox Textbox/<WriteSentence>d__8::<>4__this
+	// Textbox Textbox/<WriteSentence>d__9::<>4__this
 	Textbox_t22AD3251EEFE53B8C40240A2B3EE53CF118B5AD8* ___U3CU3E4__this_2;
-	// System.Char[] Textbox/<WriteSentence>d__8::<>s__1
+	// System.Char[] Textbox/<WriteSentence>d__9::<>s__1
 	CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB* ___U3CU3Es__1_3;
-	// System.Int32 Textbox/<WriteSentence>d__8::<>s__2
+	// System.Int32 Textbox/<WriteSentence>d__9::<>s__2
 	int32_t ___U3CU3Es__2_4;
-	// System.Char Textbox/<WriteSentence>d__8::<Character>5__3
+	// System.Char Textbox/<WriteSentence>d__9::<Character>5__3
 	Il2CppChar ___U3CCharacterU3E5__3_5;
 };
 
@@ -30973,9 +30973,9 @@ struct U3CU3Ec_tC796A0CA8F893EEFE73B58986C8DC52EB8C99A69_StaticFields
 
 // TMPro.TextMeshProUGUI/<DelayedMaterialRebuild>d__19
 
-// Textbox/<WriteSentence>d__8
+// Textbox/<WriteSentence>d__9
 
-// Textbox/<WriteSentence>d__8
+// Textbox/<WriteSentence>d__9
 
 // UnityEngine.Timeline.TimeNotificationBehaviour/<>c
 struct U3CU3Ec_t008379627E11F153BBF661B1F74241272206C3D2_StaticFields
@@ -39174,7 +39174,7 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7306[1] =
 	static_cast<int32_t>(offsetof(showText_t34F66AB9162A11784E6D0ED9E0D06C85DC2289C6, ___Object_4)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7307[6] = 
 {
-	static_cast<int32_t>(offsetof(U3CWriteSentenceU3Ed__8_tD0E643F9111EAA7B5745629128C7589A3FA293A2, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CWriteSentenceU3Ed__8_tD0E643F9111EAA7B5745629128C7589A3FA293A2, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CWriteSentenceU3Ed__8_tD0E643F9111EAA7B5745629128C7589A3FA293A2, ___U3CU3E4__this_2)),static_cast<int32_t>(offsetof(U3CWriteSentenceU3Ed__8_tD0E643F9111EAA7B5745629128C7589A3FA293A2, ___U3CU3Es__1_3)),static_cast<int32_t>(offsetof(U3CWriteSentenceU3Ed__8_tD0E643F9111EAA7B5745629128C7589A3FA293A2, ___U3CU3Es__2_4)),static_cast<int32_t>(offsetof(U3CWriteSentenceU3Ed__8_tD0E643F9111EAA7B5745629128C7589A3FA293A2, ___U3CCharacterU3E5__3_5)),};
+	static_cast<int32_t>(offsetof(U3CWriteSentenceU3Ed__9_tAD9A31F79F49048EBB63A2CEA8360C4C438D72DA, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CWriteSentenceU3Ed__9_tAD9A31F79F49048EBB63A2CEA8360C4C438D72DA, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CWriteSentenceU3Ed__9_tAD9A31F79F49048EBB63A2CEA8360C4C438D72DA, ___U3CU3E4__this_2)),static_cast<int32_t>(offsetof(U3CWriteSentenceU3Ed__9_tAD9A31F79F49048EBB63A2CEA8360C4C438D72DA, ___U3CU3Es__1_3)),static_cast<int32_t>(offsetof(U3CWriteSentenceU3Ed__9_tAD9A31F79F49048EBB63A2CEA8360C4C438D72DA, ___U3CU3Es__2_4)),static_cast<int32_t>(offsetof(U3CWriteSentenceU3Ed__9_tAD9A31F79F49048EBB63A2CEA8360C4C438D72DA, ___U3CCharacterU3E5__3_5)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7308[4] = 
 {
 	static_cast<int32_t>(offsetof(Textbox_t22AD3251EEFE53B8C40240A2B3EE53CF118B5AD8, ___DialogueText_4)),static_cast<int32_t>(offsetof(Textbox_t22AD3251EEFE53B8C40240A2B3EE53CF118B5AD8, ___Sentences_5)),static_cast<int32_t>(offsetof(Textbox_t22AD3251EEFE53B8C40240A2B3EE53CF118B5AD8, ___Index_6)),static_cast<int32_t>(offsetof(Textbox_t22AD3251EEFE53B8C40240A2B3EE53CF118B5AD8, ___DialogueSpeed_7)),};
