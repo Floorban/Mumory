@@ -69,12 +69,12 @@ public class ClickerBehavior : MonoBehaviour
 
     void ScaleUpDown(GameObject Go)
     {
-        LeanTween.scale(Go, new Vector3(BounceScale, BounceScale, BounceScale), BounceDuration / 2f)
+        LeanTween.scale(Go, new Vector3(BounceScale * 8f, BounceScale * 8f, BounceScale * 8f), BounceDuration / 2f)
             .setEaseInOutSine()
         .setOnComplete(ScaleDown);
         void ScaleDown()
         {
-            LeanTween.scale(Go, new Vector3(1f, 1f, 1f), BounceDuration / 2f)
+            LeanTween.scale(Go, new Vector3(7f, 7f, 7f), BounceDuration / 2f)
                 .setEaseInOutSine();
         }
     }
