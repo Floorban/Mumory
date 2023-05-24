@@ -5905,7 +5905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e48689a99a02bf4ab64012de79e78f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabUi: {fileID: 8448472749923432802, guid: 44664714d4046b9439f22ac41731e21e,
+  prefabUi: {fileID: 5415587379474816189, guid: 44664714d4046b9439f22ac41731e21e,
     type: 3}
 --- !u!65 &1940680950
 BoxCollider:
