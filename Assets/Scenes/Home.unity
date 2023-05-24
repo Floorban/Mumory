@@ -4447,7 +4447,7 @@ MonoBehaviour:
   DialogueText: {fileID: 1821722684}
   Sentences:
   - Why no one trusts me
-  DialogueSpeed: 11
+  DialogueSpeed: 2
 --- !u!65 &372789976
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6436,7 +6436,7 @@ MonoBehaviour:
   DialogueText: {fileID: 1821722684}
   Sentences:
   - I...
-  DialogueSpeed: 11
+  DialogueSpeed: 2
 --- !u!65 &509517542
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9835,7 +9835,7 @@ MonoBehaviour:
   DialogueText: {fileID: 1821722684}
   Sentences:
   - I'm also a man...
-  DialogueSpeed: 11
+  DialogueSpeed: 2
 --- !u!65 &809681489
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10481,7 +10481,7 @@ MonoBehaviour:
   DialogueText: {fileID: 0}
   Sentences:
   - I need to find a way out
-  DialogueSpeed: 11
+  DialogueSpeed: 2
 --- !u!65 &856752859
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13406,7 +13406,7 @@ MonoBehaviour:
   DialogueText: {fileID: 1821722684}
   Sentences:
   - What's the point to do all of this
-  DialogueSpeed: 11
+  DialogueSpeed: 2
 --- !u!65 &1118881241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18342,7 +18342,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 1000
   m_TargetDisplay: 0
 --- !u!224 &1602633064
 RectTransform:
@@ -19632,7 +19632,7 @@ MonoBehaviour:
   DialogueText: {fileID: 1821722684}
   Sentences:
   - Again and again and again...
-  DialogueSpeed: 11
+  DialogueSpeed: 2
 --- !u!65 &1735371595
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20415,8 +20415,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 150
-  m_fontSizeBase: 150
+  m_fontSize: 130
+  m_fontSizeBase: 130
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -20451,7 +20451,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -15.230469, y: -10.532715, z: -15.609192, w: -9.869995}
+  m_margin: {x: -15.230469, y: -46.940918, z: -15.609192, w: -9.869995}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -23040,7 +23040,7 @@ MonoBehaviour:
   DialogueText: {fileID: 1821722684}
   Sentences:
   - I don't know....
-  DialogueSpeed: 11
+  DialogueSpeed: 2
 --- !u!65 &2126208602
 BoxCollider:
   m_ObjectHideFlags: 0
