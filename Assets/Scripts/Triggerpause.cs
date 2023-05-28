@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-public class PauseMenu : MonoBehaviour
+public class Triggerpause : MonoBehaviour
 {
     public GameObject pauseMenu;
     public static bool isPaused;
@@ -54,4 +54,8 @@ public class PauseMenu : MonoBehaviour
         Application.Quit();
     }
 
+    private void OnTriggerEnter(Collider other) 
+    {
+        SceneManager.LoadScene("Classroom");
+    }
 }
