@@ -11,35 +11,17 @@ public class Textbox : MonoBehaviour
     private int Index = 0;
     public float DialogueSpeed;
 
-    // Start is called before the first frame update
-    void Start()
+    void OnTriggerExit(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        /*if(Input.GetKeyDown(KeyCode.E))
+        if (other.CompareTag("Player"))
         {
-            NextSentence();
-        }*/
+            DialogueText.text = string.Empty;
+        }
     }
-
-    void OnTriggerEnter()
+    
+    public void NextSentence()
     {
-        NextSentence();
-    }
-
-
-    void OnTriggerExit()
-    {
-        DialogueText.text = string.Empty;
-    }
-
-    void NextSentence()
-    {
-        if(Index <= Sentences.Length - 1)
+        if (Index <= Sentences.Length - 1)
         {
             DialogueText.text = "";
             StartCoroutine(WriteSentence());
@@ -49,14 +31,12 @@ public class Textbox : MonoBehaviour
 
     IEnumerator WriteSentence()
     {
-        foreach(char Character in Sentences[Index].ToCharArray())
+        foreach (char Character in Sentences[Index].ToCharArray())
         {
-
             DialogueText.text += Character;
             yield return new WaitForSeconds(DialogueSpeed * Time.deltaTime);
         }
 
         Index++;
     }
-
 }
