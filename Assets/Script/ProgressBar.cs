@@ -213,7 +213,7 @@ public class ProgressBar : MonoBehaviour
         for (float t = 0f; t < duration; t += Time.deltaTime)
         {
             _value = Mathf.Lerp(oldValue, newValue, t / duration);
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) || Input.touchCount > 0)
             {
                 hasStopped = true;
                 break;
