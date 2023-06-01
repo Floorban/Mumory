@@ -110,11 +110,8 @@ public class ProgressBarBehavior : MonoBehaviour
             Debug.Log("Ran out of time.");
             TimerStart = false;
             isActive = true;
-            if (_countdowntext == null)
-            {
-                _countdowntxtObject.SetActive(false);
-            }
             _highlightObject.SetActive(true);
+            _countdowntxtObject.SetActive(false);
         }
     }
 
