@@ -7,11 +7,11 @@ public class QTE2Script : MonoBehaviour
 {
     public Image Bar;
     public RectTransform ButtonContainer;
-    private float _value = 0;
-    public float DecreaseRate = 10f;
-    public float IncreaseValueBy = 20f;
-    public float BounceDuration = 0.2f;
-    public float BounceScale = 1.2f;
+    private float _value;
+    public float DecreaseRate;
+    public float IncreaseValueBy;
+    public float BounceDuration;
+    public float BounceScale;
     private int _stage = 1;
     public GameObject WinCondition;
     public GameObject LoseCondition;
@@ -35,7 +35,7 @@ public class QTE2Script : MonoBehaviour
         if (_value < 0)
         {
             _value = 0;
-            DecreaseRate = 10f;
+            DecreaseRate = 15f;
         }
     }
     void BarChange(float Value)
@@ -65,12 +65,12 @@ public class QTE2Script : MonoBehaviour
 
     void ScaleUpDown(GameObject Go)
     {
-        LeanTween.scale(Go, new Vector3(BounceScale * 8, BounceScale * 8, BounceScale * 8), BounceDuration / 2f)
+        LeanTween.scale(Go, new Vector3(BounceScale * 3, BounceScale * 3, BounceScale * 3), BounceDuration / 2f)
             .setEaseInOutSine()
         .setOnComplete(ScaleDown);
         void ScaleDown()
         {
-            LeanTween.scale(Go, new Vector3(8f, 8f, 8f), BounceDuration / 2f)
+            LeanTween.scale(Go, new Vector3(3f, 3f, 3f), BounceDuration / 2f)
                 .setEaseInOutSine();
         }
     }
