@@ -11,14 +11,6 @@ public class Textbox : MonoBehaviour
     private int Index = 0;
     public float DialogueSpeed;
 
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            DialogueText.text = string.Empty;
-        }
-    }
-    
     public void NextSentence()
     {
         if (Index <= Sentences.Length - 1)

@@ -9,7 +9,7 @@ public class ManagerNPCUi : MonoBehaviour
     public Image prefabUi;
     private Image uiUse;   
     //private Transform tr_head;
-    private Vector3 offset = new Vector3(0, 1.5f, 0);
+    public Vector3 offset = new Vector3(0, 1.5f, 0);
 
     // Start is called before the first frame update
     void Start()

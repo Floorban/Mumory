@@ -7,8 +7,10 @@ public class PanelOpener : MonoBehaviour
     public GameObject Photo;
     public GameObject BOpen;
     public GameObject BClose;
+
+    public GameObject Narration;
     private bool _isOpen = false;
-    private Textbox textbox;
+    //private Textbox textbox;
 
     public AudioSource soundPlayer;
 
@@ -17,7 +19,7 @@ public class PanelOpener : MonoBehaviour
         Photo.SetActive(false);
         BOpen.SetActive(false);
         BClose.SetActive(false);
-        textbox = GetComponent<Textbox>();
+        Narration.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -35,20 +37,27 @@ public class PanelOpener : MonoBehaviour
             Photo.SetActive(false);
             BOpen.SetActive(false);
             BClose.SetActive(false);
+            Narration.SetActive(false);
+            soundPlayer.Play();
         }
     }
+    public void OnOpenButtonClick()
+    {
+        BOpen.SetActive(false);
+        BClose.SetActive(true);
+        Photo.SetActive(true);
+        Narration.SetActive(true);
+
+    }
+
     public void OnCloseButtonClick()
     {
-        if (Photo != null)
-        {
-            bool isActive = Photo.activeSelf;
-            Photo.SetActive(!isActive);
-            
-        }
-
-            textbox.NextSentence();
-            soundPlayer.Play();
-
+        BOpen.SetActive(true);
+        BClose.SetActive(false);
+        Photo.SetActive(false);
+        Narration.SetActive(false);
+        
+        
     }
 }
 /*public class PanelOpener : MonoBehaviour

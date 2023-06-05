@@ -7,11 +7,12 @@ using TMPro;
 public class OpenClose : MonoBehaviour
 {
     public GameObject Box;
+    public GameObject textBox;
     public GameObject ButtonOpen;
     public GameObject ButtonClose;
     public Animator animator;
     private bool isOpen = false;
-    private Textbox textbox;
+    
 
     public AudioSource soundPlayer;
 
@@ -19,7 +20,7 @@ public class OpenClose : MonoBehaviour
     {
         ButtonOpen.SetActive(false);
         ButtonClose.SetActive(false);
-        textbox = GetComponent<Textbox>();
+        textBox.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -36,6 +37,7 @@ public class OpenClose : MonoBehaviour
         {
             ButtonOpen.SetActive(false);
             ButtonClose.SetActive(false);
+            textBox.SetActive(false);
         }
     }
 
@@ -57,7 +59,7 @@ public class OpenClose : MonoBehaviour
         ButtonOpen.SetActive(false);
         ButtonClose.SetActive(true);
         isOpen = true;
-        textbox.NextSentence();
+        textBox.SetActive(true);
         soundPlayer.Play();
     }
 
@@ -67,6 +69,6 @@ public class OpenClose : MonoBehaviour
         ButtonOpen.SetActive(true);
         ButtonClose.SetActive(false);
         isOpen = false;
-        textbox.NextSentence();
+        textBox.SetActive(false);
     }
 }
