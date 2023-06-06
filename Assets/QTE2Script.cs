@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class QTE2Script : MonoBehaviour
 {
+    public GameObject Joystick;
     public Image Bar;
     public RectTransform ButtonContainer;
-    private float _value;
+    public float _value;
     public float DecreaseRate;
     public float IncreaseValueBy;
     public float BounceDuration;
@@ -16,8 +17,10 @@ public class QTE2Script : MonoBehaviour
     public GameObject WinCondition;
     public GameObject LoseCondition;
     private Transform canvasP;
+    QTE2Activator Instance = new QTE2Activator();
     private void Start()
     {
+        Joystick.SetActive(false);
         canvasP = GameObject.Find("Canvas").GetComponent<Transform>();
         GameObject ButtonObject = GameObject.Find("ButtonClick");
         Transform ButtonClick = transform.Find("ButtonClick");
@@ -59,7 +62,10 @@ public class QTE2Script : MonoBehaviour
         }
         if (_stage>=5)
         {
-            Destroy(gameObject);
+            Joystick.SetActive(true);
+            _stage = 1;
+            Instance.QTE2Victory();
+            this.gameObject.SetActive(false);
         }
     }
 

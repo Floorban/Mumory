@@ -41,7 +41,7 @@ public class OpenClose : MonoBehaviour
         }
     }
 
-    private void ExeuterTrigger(string trigger)
+    public void ExeuterTrigger(string trigger)
     {
         if (Box != null)
         {

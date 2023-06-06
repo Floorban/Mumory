@@ -1950,6 +1950,25 @@ MonoBehaviour:
   prefabUi: {fileID: 2919575233844145592, guid: fb0c24202fe2065408acdd950b89a6fc,
     type: 3}
   offset: {x: 0, y: 1.5, z: 0}
+--- !u!114 &89852970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89852964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21c3467e0f0ff704b89f324c9dc4154f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Box: {fileID: 89852964}
+  textBox: {fileID: 425542110}
+  ButtonOpen: {fileID: 795048547}
+  ButtonClose: {fileID: 578991733}
+  animator: {fileID: 89852967}
+  soundPlayer: {fileID: 544220399}
+  QTE2: {fileID: 1395193889}
 --- !u!1 &91702149
 GameObject:
   m_ObjectHideFlags: 0
@@ -14419,9 +14438,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 89852968}
-        m_TargetAssemblyTypeName: OpenClose, Assembly-CSharp
-        m_MethodName: OnCloseButtonClick
+      - m_Target: {fileID: 89852970}
+        m_TargetAssemblyTypeName: QTE2Activator, Assembly-CSharp
+        m_MethodName: CloseButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21444,9 +21463,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 89852968}
-        m_TargetAssemblyTypeName: OpenClose, Assembly-CSharp
-        m_MethodName: OnOpenButtonClick
+      - m_Target: {fileID: 89852970}
+        m_TargetAssemblyTypeName: QTE2Activator, Assembly-CSharp
+        m_MethodName: OpenButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -36514,6 +36533,12 @@ RectTransform:
   m_AnchoredPosition: {x: 348, y: -543.8259}
   m_SizeDelta: {x: 359.5592, y: 374.9467}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1395193889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6449381150593312837, guid: 1978b2a76fb7a7d4bbee1b12394e71c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1722590459}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1400358809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44617,6 +44642,11 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.17254902
       objectReference: {fileID: 0}
+    - target: {fileID: 6449381150593312836, guid: 1978b2a76fb7a7d4bbee1b12394e71c9,
+        type: 3}
+      propertyPath: Joystick
+      value: 
+      objectReference: {fileID: 393606539}
     - target: {fileID: 6449381150593312836, guid: 1978b2a76fb7a7d4bbee1b12394e71c9,
         type: 3}
       propertyPath: BounceScale
