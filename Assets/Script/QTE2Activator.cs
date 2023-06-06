@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,18 +8,20 @@ public class QTE2Activator : OpenClose
     public GameObject QTE2;
     private bool isQTEActive = false;
     private bool haspressedbefore = false;
-    private float minQTE2 = 0f;
-    private float maxQTE2 = 100f;
-    private int Victory = 0;
     private void Start()
     {
         QTE2.SetActive(false);
     }
+    void OnEnable() {
+        QTE2Script.OnBoolValueChanged += HandleBoolValueChanged;
+    }
+    void OnDisable() {
+        QTE2Script.OnBoolValueChanged -= HandleBoolValueChanged;
+    }
+    void HandleBoolValueChanged(bool value){
+        ButtonOpen.SetActive(true);
+    }
     public void Update(){
-        if(Victory >= 1){
-            ButtonClose.SetActive(true);
-            Debug.Log("helpme");
-        }
     }
     public void OpenButtonPressed(){
          if (!haspressedbefore && !isQTEActive){
@@ -39,8 +42,4 @@ public class QTE2Activator : OpenClose
         OnCloseButtonClick();
         isQTEActive = false;
     }
-    public void QTE2Victory()
-{
-    Victory++;
-}
 }

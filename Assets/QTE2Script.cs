@@ -17,7 +17,10 @@ public class QTE2Script : MonoBehaviour
     public GameObject WinCondition;
     public GameObject LoseCondition;
     private Transform canvasP;
-    QTE2Activator Instance = new QTE2Activator();
+    public delegate void VictoryEventHandler(bool value);
+    public static event VictoryEventHandler OnBoolValueChanged;
+    bool VictoryValue = true;
+
     private void Start()
     {
         Joystick.SetActive(false);
@@ -64,7 +67,7 @@ public class QTE2Script : MonoBehaviour
         {
             Joystick.SetActive(true);
             _stage = 1;
-            Instance.QTE2Victory();
+            OnBoolValueChanged?.Invoke(VictoryValue);
             this.gameObject.SetActive(false);
         }
     }
