@@ -10,6 +10,15 @@ public class Textbox : MonoBehaviour
     public string[] Sentences;
     private int Index = 0;
     public float DialogueSpeed;
+    
+   /* private void OnTriggerEnter(Collider other) 
+    {
+        if (other.CompareTag("Player"))
+        {
+            NextSentence();
+        }
+        
+    }*/
 
     public void NextSentence()
     {

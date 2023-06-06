@@ -6,22 +6,22 @@ using TMPro;
 
 public class showText : MonoBehaviour
 {
-    public GameObject Object;
+
+    public Textbox textbox;
   
       void Start()
+      {
+        
+      }
+
+     private void OnTriggerEnter(Collider other) 
     {
-        Object.SetActive(false);
+        if (other.CompareTag("Player"))
+        {
+            textbox.NextSentence();
+        }
+        
     }
 
-      void OnTriggerEnter()
-      {
-        Object.SetActive(true);
-      }
-
-      void OnTriggerExit()
-      {
-        Object.SetActive(false);
-      }
-  
    
 }
