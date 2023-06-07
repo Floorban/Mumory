@@ -1247,6 +1247,7 @@ MonoBehaviour:
   animator: {fileID: 89852967}
   soundPlayer: {fileID: 544220399}
   QTE2: {fileID: 1395193889}
+  Photo: {fileID: 739766141}
 --- !u!1 &91702149
 GameObject:
   m_ObjectHideFlags: 0
@@ -5737,7 +5738,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &501317141
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5757,8 +5758,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -764.4591, y: 1753.0837}
-  m_SizeDelta: {x: 494.2212, y: 494.222}
+  m_AnchoredPosition: {x: -661, y: 1778.7183}
+  m_SizeDelta: {x: 547.66, y: 547.6581}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &501317142
 MonoBehaviour:
@@ -5767,7 +5768,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501317140}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91d9f9a4d136edb4dafc3a2b15c61b91, type: 3}
   m_Name: 
@@ -15608,7 +15609,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1481764106
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15627,7 +15628,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000061035, y: 1460.3329}
+  m_AnchoredPosition: {x: -0.000047472, y: 1833.7}
   m_SizeDelta: {x: 1920, y: 492.6635}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1481764108
@@ -18286,6 +18287,11 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.17254902
       objectReference: {fileID: 0}
+    - target: {fileID: 6449381150593312836, guid: 1978b2a76fb7a7d4bbee1b12394e71c9,
+        type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 1481764110}
     - target: {fileID: 6449381150593312836, guid: 1978b2a76fb7a7d4bbee1b12394e71c9,
         type: 3}
       propertyPath: Joystick

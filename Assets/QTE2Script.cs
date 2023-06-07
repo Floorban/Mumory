@@ -15,8 +15,6 @@ public class QTE2Script : MonoBehaviour
     public float BounceDuration;
     public float BounceScale;
     private int _stage = 1;
-    public GameObject WinCondition;
-    public GameObject LoseCondition;
     private Transform canvasP;
     public delegate void VictoryEventHandler(bool value);
     public static event VictoryEventHandler OnBoolValueChanged;
@@ -56,27 +54,29 @@ public class QTE2Script : MonoBehaviour
         ButtonContainer.localEulerAngles = new Vector3(0, 0, -buttonAngle);
     } 
 
-    void IncrementValue()
-    {
-        _value = _value + IncreaseValueBy;
-        ScaleUpDown(gameObject);
-        if (_value >= 100)
-        {   
-            
-            _stage++;
-            
-            Debug.Log(_stage);
-            _value = 100;
-            DecreaseRate = 100f;
-        }
-        if (_stage>=5)
-        {
-            Joystick.SetActive(true);
-            _stage = 1;
-            OnBoolValueChanged?.Invoke(VictoryValue);
-            this.gameObject.SetActive(false);
-        }
+ void IncrementValue()
+{
+    _value = _value + IncreaseValueBy;
+    ScaleUpDown(gameObject);
+    if (_value >= 100)
+    {   
+        _stage++;
+        Debug.Log(_stage);
+        _value = 100;
+        DecreaseRate = 100f;
+        
+        // Apply health damage when value reaches 100
+        health.Damage(10f);
     }
+    if (_stage >= 5)
+    {
+        Joystick.SetActive(true);
+        _stage = 1;
+        OnBoolValueChanged?.Invoke(VictoryValue);
+        this.gameObject.SetActive(false);
+    }
+}
+
 
     void ScaleUpDown(GameObject Go)
     {
