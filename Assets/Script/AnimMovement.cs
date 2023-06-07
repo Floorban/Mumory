@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class AnimMovement : MonoBehaviour
 {
-    public Health health;
+
     PlayerInput playerInput;
     CharacterController characterController;
     Animator animator;
@@ -26,7 +26,6 @@ public class AnimMovement : MonoBehaviour
         playerInput.CharacterControls.Move.canceled += onMovementInput;
         playerInput.CharacterControls.Move.performed += onMovementInput;
 
-        Health health = GetComponent<Health>();
     }
 
     void onMovementInput(InputAction.CallbackContext context)
@@ -69,25 +68,10 @@ public class AnimMovement : MonoBehaviour
 
         
     }
-    void handleAnimationSad()
-    {
-        bool Sadwalk = animator.GetBool("Sanity");
-
-        if (isMovementPressed && !Sadwalk)
-        {
-            animator.SetBool("Sanity", true);
-        }
-        else if (!isMovementPressed && Sadwalk)
-        {
-            animator.SetBool("Sanity", false);
-        }
-    }
+  
     void Update()
     {
-        if (health.health <= 50)
-        {
-        handleAnimationSad();
-        }
+
         handleAnimation();
         handleRotation();
         characterController.Move(currentMovement * Time.deltaTime * 3.5f);

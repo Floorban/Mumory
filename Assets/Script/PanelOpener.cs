@@ -38,7 +38,7 @@ public class PanelOpener : MonoBehaviour
             BOpen.SetActive(false);
             BClose.SetActive(false);
             Narration.SetActive(false);
-            soundPlayer.Play();
+            
         }
     }
     public void OnOpenButtonClick()
@@ -56,7 +56,7 @@ public class PanelOpener : MonoBehaviour
         BClose.SetActive(false);
         Photo.SetActive(false);
         Narration.SetActive(false);
-        
+        soundPlayer.Play();
         
     }
 }
