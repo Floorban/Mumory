@@ -36,6 +36,7 @@ public class QTE2Script : MonoBehaviour
     {
         BarDecrease();
         BarChange(_value);
+        ResetAtZero();
     }
     void BarDecrease()
     {
@@ -62,12 +63,37 @@ public class QTE2Script : MonoBehaviour
     {   
         _stage++;
         Debug.Log(_stage);
-        _value = 100;
+        //ResetValueTo(40);
         DecreaseRate = 100f;
+
         
         // Apply health damage when value reaches 100
         health.Damage(10f);
     }
+
+}
+    void ResetValueTo(float resetValue)
+    {
+        _value = resetValue;
+    }   
+    void ResetAtZero()
+    {
+         
+        if (_value <= 0)
+    {   
+        _stage++;
+        Debug.Log(_stage);
+        DecreaseRate = 100f;
+        _value = 40;
+        
+        // Apply health damage when value reaches 100
+        health.Heal(10f);
+    }
+     if (_value <= 40)
+    {
+         DecreaseRate = 15f;
+    }
+    
     if (_stage >= 5)
     {
         Joystick.SetActive(true);
@@ -75,8 +101,7 @@ public class QTE2Script : MonoBehaviour
         OnBoolValueChanged?.Invoke(VictoryValue);
         this.gameObject.SetActive(false);
     }
-}
-
+    }
 
     void ScaleUpDown(GameObject Go)
     {

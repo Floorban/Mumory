@@ -10,7 +10,7 @@ public class Health : MonoBehaviour
     public Text healthText;
     public Image healthBar;
 
-    float health, maxHealth = 100;
+    public float health, maxHealth = 100;
     float lerpSpeed;
 
     // Start is called before the first frame update

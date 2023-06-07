@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class AnimMovement : MonoBehaviour
 {
+    public Health health;
     PlayerInput playerInput;
     CharacterController characterController;
     Animator animator;
@@ -15,43 +16,25 @@ public class AnimMovement : MonoBehaviour
     bool isMovementPressed;
     float rotationFactorPerFrame = 3.5f;
 
-
-
     void Awake()
     {
         playerInput = new PlayerInput();
-        characterController =  GetComponent<CharacterController>();
+        characterController = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
 
         playerInput.CharacterControls.Move.started += onMovementInput;
         playerInput.CharacterControls.Move.canceled += onMovementInput;
         playerInput.CharacterControls.Move.performed += onMovementInput;
 
-       /* playerInput.CharacterControls.Move.started += context => {
-
-            currentMovementInput = context.ReadValue<Vector2>();
-            currentMovement.x = currentMovementInput.x;
-            currentMovement.z = currentMovementInput.y;
-            isMovementPressed = currentMovementInput.x != 0 || currentMovementInput.y != 0;
-            
-        };    
-
-        playerInput.CharacterControls.Move.canceled += context => {
-
-            currentMovementInput = context.ReadValue<Vector2>();
-            currentMovement.x = currentMovementInput.x;
-            currentMovement.z = currentMovementInput.y;
-            isMovementPressed = currentMovementInput.x != 0 || currentMovementInput.y != 0;
-            
-        };  */       
+        Health health = GetComponent<Health>();
     }
 
     void onMovementInput(InputAction.CallbackContext context)
     {
-            currentMovementInput = context.ReadValue<Vector2>();
-            currentMovement.x = currentMovementInput.x;
-            currentMovement.z = currentMovementInput.y;
-            isMovementPressed = currentMovementInput.x != 0 || currentMovementInput.y != 0;        
+        currentMovementInput = context.ReadValue<Vector2>();
+        currentMovement.x = currentMovementInput.x;
+        currentMovement.z = currentMovementInput.y;
+        isMovementPressed = currentMovementInput.x != 0 || currentMovementInput.y != 0;
     }
 
     void handleRotation()
@@ -64,19 +47,18 @@ public class AnimMovement : MonoBehaviour
 
         Quaternion currentRotation = transform.rotation;
 
-        if(isMovementPressed)
+        if (isMovementPressed)
         {
             Quaternion targetRotation = Quaternion.LookRotation(positionToLookAt);
-            transform.rotation = Quaternion.Slerp(currentRotation, targetRotation, rotationFactorPerFrame * Time.deltaTime); 
+            transform.rotation = Quaternion.Slerp(currentRotation, targetRotation, rotationFactorPerFrame * Time.deltaTime);
         }
-
     }
 
     void handleAnimation()
     {
         bool walking = animator.GetBool("walking");
 
-        if(isMovementPressed && !walking)
+        if (isMovementPressed && !walking)
         {
             animator.SetBool("walking", true);
         }
@@ -84,10 +66,28 @@ public class AnimMovement : MonoBehaviour
         {
             animator.SetBool("walking", false);
         }
-    }
 
+        
+    }
+    void handleAnimationSad()
+    {
+        bool Sadwalk = animator.GetBool("Sanity");
+
+        if (isMovementPressed && !Sadwalk)
+        {
+            animator.SetBool("Sanity", true);
+        }
+        else if (!isMovementPressed && Sadwalk)
+        {
+            animator.SetBool("Sanity", false);
+        }
+    }
     void Update()
     {
+        if (health.health <= 50)
+        {
+        handleAnimationSad();
+        }
         handleAnimation();
         handleRotation();
         characterController.Move(currentMovement * Time.deltaTime * 3.5f);
@@ -103,4 +103,3 @@ public class AnimMovement : MonoBehaviour
         playerInput.CharacterControls.Disable();
     }
 }
-

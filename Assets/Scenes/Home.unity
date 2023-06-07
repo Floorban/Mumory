@@ -2085,6 +2085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f451ffe3729a84daa97edd72583d84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 501317142}
 --- !u!114 &221890320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5738,7 +5739,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &501317141
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5768,13 +5769,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501317140}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91d9f9a4d136edb4dafc3a2b15c61b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   healthText: {fileID: 127493532}
   healthBar: {fileID: 501317143}
+  health: 0
+  maxHealth: 100
 --- !u!114 &501317143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15609,7 +15612,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1481764106
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15684,6 +15687,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthText: {fileID: 179973964}
   healthBar: {fileID: 1481764108}
+  health: 0
+  maxHealth: 100
 --- !u!1 &1486129044
 GameObject:
   m_ObjectHideFlags: 0
@@ -18289,9 +18294,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6449381150593312836, guid: 1978b2a76fb7a7d4bbee1b12394e71c9,
         type: 3}
+      propertyPath: _value
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6449381150593312836, guid: 1978b2a76fb7a7d4bbee1b12394e71c9,
+        type: 3}
       propertyPath: health
       value: 
-      objectReference: {fileID: 1481764110}
+      objectReference: {fileID: 501317142}
     - target: {fileID: 6449381150593312836, guid: 1978b2a76fb7a7d4bbee1b12394e71c9,
         type: 3}
       propertyPath: Joystick
