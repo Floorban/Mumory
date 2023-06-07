@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    //public ProgressBar progressbar;
+    //public QTE2Script qte2Script;
 
     public Text healthText;
     public Image healthBar;
@@ -22,7 +22,7 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //healthText.text = "Aletta's satisfaction: " + health + "%";
+        healthText.text = "Aletta's Sanity: " + health + "%";
         if(health > maxHealth) health = maxHealth;
 
         lerpSpeed = 5f * Time.deltaTime;

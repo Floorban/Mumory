@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class QTE2Script : MonoBehaviour
 {
+    public Health health;
     public GameObject Joystick;
     public Image Bar;
     public RectTransform ButtonContainer;
@@ -29,6 +30,9 @@ public class QTE2Script : MonoBehaviour
         Transform ButtonClick = transform.Find("ButtonClick");
         Button button = ButtonClick.GetComponent<Button>();
         button.onClick.AddListener(IncrementValue);
+
+        Health Heal = GetComponent<Health>();
+        Health Damage = GetComponent<Health>();
     }
     void Update()
     {
@@ -57,8 +61,10 @@ public class QTE2Script : MonoBehaviour
         _value = _value + IncreaseValueBy;
         ScaleUpDown(gameObject);
         if (_value >= 100)
-        {
+        {   
+            
             _stage++;
+            
             Debug.Log(_stage);
             _value = 100;
             DecreaseRate = 100f;
@@ -74,12 +80,12 @@ public class QTE2Script : MonoBehaviour
 
     void ScaleUpDown(GameObject Go)
     {
-        LeanTween.scale(Go, new Vector3(BounceScale * 3, BounceScale * 3, BounceScale * 3), BounceDuration / 2f)
+        LeanTween.scale(Go, new Vector3(BounceScale * 4, BounceScale * 4, BounceScale * 4), BounceDuration / 2f)
             .setEaseInOutSine()
         .setOnComplete(ScaleDown);
         void ScaleDown()
         {
-            LeanTween.scale(Go, new Vector3(3f, 3f, 3f), BounceDuration / 2f)
+            LeanTween.scale(Go, new Vector3(4f, 4f, 4f), BounceDuration / 2f)
                 .setEaseInOutSine();
         }
     }
