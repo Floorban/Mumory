@@ -23,6 +23,7 @@ public class QTE2Activator : OpenClose
     void HandleBoolValueChanged(bool value){
         ButtonClose.SetActive(true);
         Photo.SetActive(true);
+        textBox.SetActive(true);
     }
     public void Update(){
     }

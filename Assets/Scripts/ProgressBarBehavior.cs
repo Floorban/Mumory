@@ -111,6 +111,8 @@ public class ProgressBarBehavior : MonoBehaviour
             TimerStart = false;
             isActive = true;
             _highlightObject.SetActive(true);
+            if (_countdowntext == null)
+            return;
             _countdowntxtObject.SetActive(false);
         }
     }
