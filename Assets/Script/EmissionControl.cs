@@ -9,7 +9,7 @@ public class EmissionControl : MonoBehaviour
 
     private void Start()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other) 
@@ -22,6 +22,7 @@ public class EmissionControl : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             material.EnableKeyword("_EMISSION");
+           material2.EnableKeyword("_EMISSION");
         }
     }
 
@@ -30,6 +31,7 @@ public class EmissionControl : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             material.DisableKeyword("_EMISSION");
+            material2.EnableKeyword("_EMISSION");
 
             //ClosePanel();
         }
