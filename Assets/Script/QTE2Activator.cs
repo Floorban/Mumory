@@ -6,13 +6,14 @@ using UnityEngine;
 public class QTE2Activator : OpenClose
 {
     public GameObject QTE2;
-    public GameObject Photo;
+    //public GameObject Photo;
     private bool isQTEActive = false;
     private bool haspressedbefore = false;
     private void Start()
     {
         QTE2.SetActive(false);
-        Photo.SetActive(false);
+      //  Photo.SetActive(false);
+      ButtonOpen.SetActive(false);
     }
     void OnEnable() {
         QTE2Script.OnBoolValueChanged += HandleBoolValueChanged;
@@ -21,11 +22,12 @@ public class QTE2Activator : OpenClose
         QTE2Script.OnBoolValueChanged -= HandleBoolValueChanged;
     }
     void HandleBoolValueChanged(bool value){
-        ButtonClose.SetActive(true);
-        Photo.SetActive(true);
+       // ButtonClose.SetActive(true);
+       // Photo.SetActive(true);
         textBox.SetActive(true);
     }
     public void Update(){
+
     }
     public void OpenButtonPressed(){
          if (!haspressedbefore && !isQTEActive){
@@ -33,20 +35,15 @@ public class QTE2Activator : OpenClose
             isQTEActive = true;
             QTE2.SetActive(true);
             ButtonOpen.SetActive(false);
-            ButtonClose.SetActive(false);
+          //  ButtonClose.SetActive(false);
          }
          else{
             OnOpenButtonClick();
-            Photo.SetActive(true);
+            //Photo.SetActive(true);
           }
          isQTEActive = false;
          haspressedbefore = true;
     }
 
-    public void CloseButtonPressed(){
-        QTE2.SetActive(false);
-        OnCloseButtonClick();
-        isQTEActive = false;
-        Photo.SetActive(false);
-    }
+
 }

@@ -2538,7 +2538,7 @@ PrefabInstance:
     - target: {fileID: 8928822085969359914, guid: 4908f2eea42b13e43a00d211501b0f2a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -30.115
+      value: -30.22
       objectReference: {fileID: 0}
     - target: {fileID: 8928822085969359914, guid: 4908f2eea42b13e43a00d211501b0f2a,
         type: 3}
@@ -2611,8 +2611,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 40a768257b34298468fe33d0072d6beb, type: 2}
-  material2: {fileID: 880774007180850119, guid: 9285f99b4e0ac9b4b9a65732ae4e0f84,
-    type: 3}
 --- !u!65 &944271123
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3713,7 +3711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1435366738}
-  smoothTime: 0.3
+  smoothTime: 0.5
   offset: {x: 0, y: 13, z: 0}
 --- !u!1 &1762141383
 GameObject:
@@ -4314,7 +4312,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 60.705284, y: 49.87027, z: 26.23246, w: -116.326416}
+  m_margin: {x: 80.9414, y: 49.87027, z: 31.972397, w: -116.326416}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

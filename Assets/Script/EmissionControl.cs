@@ -5,7 +5,7 @@ using UnityEngine;
 public class EmissionControl : MonoBehaviour
 {
     public Material material;
-    public Material material2;
+    //public Material material2;
 
     private void Start()
     {
@@ -22,7 +22,7 @@ public class EmissionControl : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             material.EnableKeyword("_EMISSION");
-           material2.EnableKeyword("_EMISSION");
+           //material2.EnableKeyword("_EMISSION");
         }
     }
 
@@ -31,7 +31,7 @@ public class EmissionControl : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             material.DisableKeyword("_EMISSION");
-            material2.EnableKeyword("_EMISSION");
+            //material2.EnableKeyword("_EMISSION");
 
             //ClosePanel();
         }
