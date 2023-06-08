@@ -11,6 +11,9 @@ public class OpenClose : MonoBehaviour
     public GameObject ButtonOpen;
     public GameObject ButtonClose;
     public Animator animator;
+    public PauseMenu pausemenu;
+
+    public GameObject Photo;
     private bool isOpen = false;
     
 
@@ -20,7 +23,11 @@ public class OpenClose : MonoBehaviour
     {
         ButtonOpen.SetActive(false);
         ButtonClose.SetActive(false);
-        textBox.SetActive(false);
+        textBox.SetActive(false); 
+        Photo.SetActive(false);
+        
+        GameObject pauseMenuObject = GameObject.Find("PauseMenuObject"); 
+        pausemenu = pauseMenuObject.GetComponent<PauseMenu>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -58,9 +65,11 @@ public class OpenClose : MonoBehaviour
         ExeuterTrigger("TrOpen");
         ButtonOpen.SetActive(false);
         ButtonClose.SetActive(true);
+        Photo.SetActive(true);
         isOpen = true;
         textBox.SetActive(true);
         soundPlayer.Play();
+        
     }
 
     public void OnCloseButtonClick()
@@ -69,6 +78,9 @@ public class OpenClose : MonoBehaviour
         ButtonOpen.SetActive(true);
         ButtonClose.SetActive(false);
         isOpen = false;
+        Photo.SetActive(false);
         textBox.SetActive(false);
+        pausemenu.PauseGame();
+        
     }
 }

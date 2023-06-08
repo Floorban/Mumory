@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     public static bool isPaused;
-    private Button PauseButton;
+    public Button PauseButton;
     private void Start() {
         pauseMenu.SetActive(false);
         PauseButton = GameObject.Find("ButtonForPause").GetComponent<Button>();
