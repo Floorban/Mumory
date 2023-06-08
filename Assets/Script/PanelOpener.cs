@@ -8,6 +8,10 @@ public class PanelOpener : MonoBehaviour
     public GameObject BOpen;
     public GameObject BClose;
 
+    public CameraFollow camerafollow;
+
+     private Vector3 initialOffset;
+
     public GameObject Narration;
     private bool _isOpen = false;
     //private Textbox textbox;
@@ -20,6 +24,9 @@ public class PanelOpener : MonoBehaviour
         BOpen.SetActive(false);
         BClose.SetActive(false);
         Narration.SetActive(false);
+
+        CameraFollow offset = GetComponent<CameraFollow>();
+        initialOffset = camerafollow.offset;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -38,6 +45,8 @@ public class PanelOpener : MonoBehaviour
             BOpen.SetActive(false);
             BClose.SetActive(false);
             Narration.SetActive(false);
+
+            camerafollow.offset = initialOffset;
             
         }
     }
@@ -48,6 +57,8 @@ public class PanelOpener : MonoBehaviour
         Photo.SetActive(true);
         Narration.SetActive(true);
 
+        camerafollow.offset = new Vector3(0, 10, 0);
+
     }
 
     public void OnCloseButtonClick()
@@ -57,6 +68,8 @@ public class PanelOpener : MonoBehaviour
         Photo.SetActive(false);
         Narration.SetActive(false);
         soundPlayer.Play();
+        
+        camerafollow.offset = initialOffset;
         
     }
 }

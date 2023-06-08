@@ -9,6 +9,8 @@ public class QTE2Script : MonoBehaviour
     public Health health;
     public GameObject Joystick;
     public Image Bar;
+
+    public CameraFollow camerafollow;
     public RectTransform ButtonContainer;
     public float _value;
     public float DecreaseRate;
@@ -29,6 +31,8 @@ public class QTE2Script : MonoBehaviour
     private GameObject ButtonObject;
     private GameObject TextObject;
 
+    private Vector3 initialOffset;
+
     private void Start()
     {
         Joystick.SetActive(false);
@@ -42,6 +46,9 @@ public class QTE2Script : MonoBehaviour
 
         Health Heal = GetComponent<Health>();
         Health Damage = GetComponent<Health>();
+
+        CameraFollow offset = GetComponent<CameraFollow>();
+         initialOffset = camerafollow.offset;
     }
     void Update()
     {
@@ -49,6 +56,14 @@ public class QTE2Script : MonoBehaviour
         BarChange(_value);
         ResetAtZero();
         StageHandler();
+
+          /*if (_stage > 4)
+            {
+                ResetOffset();
+            }*/
+
+        
+
     }
     void BarDecrease()
     {
@@ -112,6 +127,7 @@ public class QTE2Script : MonoBehaviour
     void StageHandler(){
         if (hashappened == false)
         {
+            camerafollow.offset = new Vector3(0, 10, 0);
             switch(_stage){
                 case 1:
                 hashappened = true;
@@ -152,13 +168,16 @@ public class QTE2Script : MonoBehaviour
                 break;
                 case 5:
                 hashappened = true;
+               
                 Joystick.SetActive(true);
                 _stage = 1;
                 OnBoolValueChanged?.Invoke(VictoryValue);
                 this.gameObject.SetActive(false);
+                ResetOffset();
                 break;
                 default:
                 Debug.Log("Invalid stage: " + _stage);
+                
                 break;
             }
         }
@@ -176,4 +195,9 @@ public class QTE2Script : MonoBehaviour
         }
     }
     
+    public void ResetOffset()
+    {
+        // Reset the camera offset to its initial value
+        camerafollow.offset = initialOffset;
+    }
 }

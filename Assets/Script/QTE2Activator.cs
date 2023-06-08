@@ -9,11 +9,15 @@ public class QTE2Activator : OpenClose
     //public GameObject Photo;
     private bool isQTEActive = false;
     private bool haspressedbefore = false;
+    //public CameraFollow camerafollow;
+    
     private void Start()
     {
         QTE2.SetActive(false);
       //  Photo.SetActive(false);
       ButtonOpen.SetActive(false);
+      //CameraFollow offset = GetComponent<CameraFollow>();
+      
     }
     void OnEnable() {
         QTE2Script.OnBoolValueChanged += HandleBoolValueChanged;
@@ -27,7 +31,7 @@ public class QTE2Activator : OpenClose
         textBox.SetActive(true);
     }
     public void Update(){
-
+        
     }
     public void OpenButtonPressed(){
          if (!haspressedbefore && !isQTEActive){
@@ -35,6 +39,8 @@ public class QTE2Activator : OpenClose
             isQTEActive = true;
             QTE2.SetActive(true);
             ButtonOpen.SetActive(false);
+           // camerafollow.offset = new Vector3(0, 10, 0);
+            
           //  ButtonClose.SetActive(false);
          }
          else{
@@ -43,6 +49,7 @@ public class QTE2Activator : OpenClose
           }
          isQTEActive = false;
          haspressedbefore = true;
+         
     }
 
 
