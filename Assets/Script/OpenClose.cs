@@ -25,9 +25,6 @@ public class OpenClose : MonoBehaviour
         ButtonClose.SetActive(false);
         textBox.SetActive(false); 
         Photo.SetActive(false);
-        
-        GameObject pauseMenuObject = GameObject.Find("PauseMenuObject"); 
-        pausemenu = pauseMenuObject.GetComponent<PauseMenu>();
     }
 
     private void OnTriggerEnter(Collider other)

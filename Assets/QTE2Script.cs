@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class QTE2Script : MonoBehaviour
 {
@@ -19,12 +20,18 @@ public class QTE2Script : MonoBehaviour
     public delegate void VictoryEventHandler(bool value);
     public static event VictoryEventHandler OnBoolValueChanged;
     bool VictoryValue = true;
+    private bool hashappened = false;
+    bool WinPoints = false;
+    public TMP_Text TextSwitch;
+    private GameObject Background;
+    GameObject ButtonObject;
 
     private void Start()
     {
         Joystick.SetActive(false);
+        Background = GameObject.Find("Background");
         canvasP = GameObject.Find("Canvas").GetComponent<Transform>();
-        GameObject ButtonObject = GameObject.Find("ButtonClick");
+        ButtonObject = GameObject.Find("ButtonClick");
         Transform ButtonClick = transform.Find("ButtonClick");
         Button button = ButtonClick.GetComponent<Button>();
         button.onClick.AddListener(IncrementValue);
@@ -37,6 +44,7 @@ public class QTE2Script : MonoBehaviour
         BarDecrease();
         BarChange(_value);
         ResetAtZero();
+        StageHandler();
     }
     void BarDecrease()
     {
@@ -58,14 +66,16 @@ public class QTE2Script : MonoBehaviour
  void IncrementValue()
 {
     _value = _value + IncreaseValueBy;
-    ScaleUpDown(gameObject);
+    ScaleUpDown(ButtonObject);
+    ScaleUpDown(Background);
     if (_value >= 100)
     {   
         _stage++;
+        hashappened = false;
         Debug.Log(_stage);
         //ResetValueTo(40);
         DecreaseRate = 100f;
-
+        WinPoints = false;
         
         // Apply health damage when value reaches 100
         health.Damage(10f);
@@ -82,6 +92,8 @@ public class QTE2Script : MonoBehaviour
         if (_value <= 0)
     {   
         _stage++;
+        hashappened = false;
+        WinPoints = true;
         Debug.Log(_stage);
         DecreaseRate = 100f;
         _value = 40;
@@ -102,15 +114,68 @@ public class QTE2Script : MonoBehaviour
         this.gameObject.SetActive(false);
     }
     }
+    void StageHandler(){
+        if (hashappened == false)
+        {
+            switch(_stage){
+                case 1:
+                hashappened = true;
+                TextSwitch.text = "Clean the room Aletta!";
+                break;
+                case 2:
+                hashappened = true;
+                if (WinPoints)
+                {
+                    TextSwitch.text = "Come on! Don't you dare do it again!";
+                }
+                else
+                {
+                    TextSwitch.text = "Good job girl! That's what women should do!";
+                }
+                break;
+                case 3:
+                hashappened = true;
+                if (WinPoints){
+                    TextSwitch.text = "Come on! Don't you dare do it again!";
+                }
+                else
+                {
+                    TextSwitch.text = "Good job girl! That's what women should do!";
+                }
+                break;
+                case 4:
+                if (WinPoints)
+                {
+                    TextSwitch.text = "Come on! Don't you dare do it again!";
+                }
+                else
+                {
+                    TextSwitch.text = "Good job girl! That's what women should do!";
+                }
+                hashappened = true;
+                break;
+                case 5:
+                hashappened = true;
+                Joystick.SetActive(true);
+                _stage = 1;
+                OnBoolValueChanged?.Invoke(VictoryValue);
+                this.gameObject.SetActive(false);
+                break;
+                default:
+                Debug.Log("Invalid stage: " + _stage);
+                break;
+            }
+        }
+    }
 
     void ScaleUpDown(GameObject Go)
     {
-        LeanTween.scale(Go, new Vector3(BounceScale * 4, BounceScale * 4, BounceScale * 4), BounceDuration / 2f)
+        LeanTween.scale(Go, new Vector3(BounceScale, BounceScale, BounceScale), BounceDuration / 2f)
             .setEaseInOutSine()
         .setOnComplete(ScaleDown);
         void ScaleDown()
         {
-            LeanTween.scale(Go, new Vector3(4f, 4f, 4f), BounceDuration / 2f)
+            LeanTween.scale(Go, new Vector3(1f, 1f, 1f), BounceDuration / 2f)
                 .setEaseInOutSine();
         }
     }
