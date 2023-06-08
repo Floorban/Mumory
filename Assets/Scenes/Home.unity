@@ -4853,6 +4853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91d9f9a4d136edb4dafc3a2b15c61b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  postProcessingVolume: {fileID: 0}
   healthText: {fileID: 127493532}
   healthBar: {fileID: 501317143}
   health: 0
@@ -9411,7 +9412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &832575518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16579,9 +16580,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91d9f9a4d136edb4dafc3a2b15c61b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  postProcessingVolume: {fileID: 832575518}
   healthText: {fileID: 179973964}
   healthBar: {fileID: 1481764108}
-  health: 100
+  health: 40
   maxHealth: 100
 --- !u!1 &1486129044
 GameObject:
