@@ -19,17 +19,21 @@ public class QTE2Script : MonoBehaviour
     private Transform canvasP;
     public delegate void VictoryEventHandler(bool value);
     public static event VictoryEventHandler OnBoolValueChanged;
+    public delegate void ShakeAction();
+    public static event ShakeAction OnShake;
     bool VictoryValue = true;
     private bool hashappened = false;
     bool WinPoints = false;
     public TMP_Text TextSwitch;
     private GameObject Background;
-    GameObject ButtonObject;
+    private GameObject ButtonObject;
+    private GameObject TextObject;
 
     private void Start()
     {
         Joystick.SetActive(false);
         Background = GameObject.Find("Background");
+        TextObject = GameObject.Find("TextObject");
         canvasP = GameObject.Find("Canvas").GetComponent<Transform>();
         ButtonObject = GameObject.Find("ButtonClick");
         Transform ButtonClick = transform.Find("ButtonClick");
@@ -76,7 +80,6 @@ public class QTE2Script : MonoBehaviour
         //ResetValueTo(40);
         DecreaseRate = 100f;
         WinPoints = false;
-        
         // Apply health damage when value reaches 100
         health.Damage(10f);
     }
@@ -97,21 +100,13 @@ public class QTE2Script : MonoBehaviour
         Debug.Log(_stage);
         DecreaseRate = 100f;
         _value = 40;
-        
+        OnShake();
         // Apply health damage when value reaches 100
         health.Heal(10f);
     }
      if (_value <= 40)
     {
          DecreaseRate = 15f;
-    }
-    
-    if (_stage >= 5)
-    {
-        Joystick.SetActive(true);
-        _stage = 1;
-        OnBoolValueChanged?.Invoke(VictoryValue);
-        this.gameObject.SetActive(false);
     }
     }
     void StageHandler(){
@@ -127,6 +122,7 @@ public class QTE2Script : MonoBehaviour
                 if (WinPoints)
                 {
                     TextSwitch.text = "Come on! Don't you dare do it again!";
+
                 }
                 else
                 {
@@ -179,4 +175,5 @@ public class QTE2Script : MonoBehaviour
                 .setEaseInOutSine();
         }
     }
+    
 }
