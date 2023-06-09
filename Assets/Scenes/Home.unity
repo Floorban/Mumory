@@ -3018,6 +3018,8 @@ MonoBehaviour:
   Photo: {fileID: 0}
   soundPlayer: {fileID: 544220399}
   QTE2: {fileID: 6449381148888550590}
+  camerafollow: {fileID: 0}
+  qte2script: {fileID: 6449381148888550591}
 --- !u!114 &320938290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23571,6 +23573,8 @@ MonoBehaviour:
   Photo: {fileID: 0}
   soundPlayer: {fileID: 544220399}
   QTE2: {fileID: 6449381148888550590}
+  camerafollow: {fileID: 330585548}
+  qte2script: {fileID: 6449381148888550591}
 --- !u!114 &919132148248397784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23694,6 +23698,11 @@ PrefabInstance:
       propertyPath: ButtonOpen
       value: 
       objectReference: {fileID: 858365575}
+    - target: {fileID: 937529813437042076, guid: 78d2374af28651b41a53c12c97dc6897,
+        type: 3}
+      propertyPath: qte2script
+      value: 
+      objectReference: {fileID: 6449381148888550591}
     - target: {fileID: 937529813437042076, guid: 78d2374af28651b41a53c12c97dc6897,
         type: 3}
       propertyPath: ButtonClose
@@ -24657,6 +24666,7 @@ MonoBehaviour:
   IncreaseValueBy: 9
   BounceDuration: 0.2
   BounceScale: 1.25
+  _stage: 1
   TextSwitch: {fileID: 1806874071}
 --- !u!224 &6449381149041814819
 RectTransform:

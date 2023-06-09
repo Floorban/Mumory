@@ -17,7 +17,7 @@ public class QTE2Script : MonoBehaviour
     public float IncreaseValueBy;
     public float BounceDuration;
     public float BounceScale;
-    private int _stage = 1;
+    public int _stage = 1;
     private Transform canvasP;
     public delegate void VictoryEventHandler(bool value);
     public static event VictoryEventHandler OnBoolValueChanged;
@@ -57,17 +57,14 @@ public class QTE2Script : MonoBehaviour
         ResetAtZero();
         StageHandler();
 
-          /*if (_stage > 4)
-            {
-                ResetOffset();
-            }*/
 
         
-
     }
     void BarDecrease()
     {
-        _value -= DecreaseRate * Time.deltaTime; // Decrease the value over time
+        _value -= DecreaseRate * Time.deltaTime;
+        Joystick.SetActive(false);
+        camerafollow.offset = new Vector3(0, 10, 0); // Decrease the value over time
         if (_value < 0)
         {
             _value = 0;
@@ -127,8 +124,9 @@ public class QTE2Script : MonoBehaviour
     void StageHandler(){
         if (hashappened == false)
         {
-            camerafollow.offset = new Vector3(0, 10, 0);
+            //camerafollow.offset = new Vector3(0, 10, 0);
             switch(_stage){
+                
                 case 1:
                 hashappened = true;
                 TextSwitch.text = "Clean the room Aletta!";
@@ -197,7 +195,7 @@ public class QTE2Script : MonoBehaviour
     
     public void ResetOffset()
     {
-        // Reset the camera offset to its initial value
+         //Reset the camera offset to its initial value
         camerafollow.offset = initialOffset;
     }
 }
