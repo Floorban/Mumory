@@ -14671,7 +14671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15524,7 +15524,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2037732453}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: GoToHome
+        m_MethodName: GoToOrigin
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19509,7 +19509,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2037732453}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: ResumeGame
+        m_MethodName: GoToHome
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20389,6 +20389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 184028468}
   PauseButton: {fileID: 1775837662}
+  endScreen: {fileID: 780361882}
 --- !u!4 &2037732454
 Transform:
   m_ObjectHideFlags: 0

@@ -8,8 +8,10 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenu;
     public static bool isPaused;
     public Button PauseButton;
+    public GameObject endScreen;
     private void Start() {
         pauseMenu.SetActive(false);
+        endScreen.SetActive(false);
         PauseButton = GameObject.Find("ButtonForPause").GetComponent<Button>();
         PauseButton.onClick.AddListener(PauseBehavior);
     }
@@ -30,6 +32,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame(){
         pauseMenu.SetActive(false);
+        endScreen.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
     }
@@ -49,6 +52,11 @@ public class PauseMenu : MonoBehaviour
     public void GoToHome(){
         Time.timeScale = 1f;
         SceneManager.LoadScene("Home");
+    }
+
+    public void GoToOrigin(){
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("origin");
     }
     public void QuitGame(){
         Application.Quit();
