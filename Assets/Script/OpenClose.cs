@@ -9,7 +9,7 @@ public class OpenClose : MonoBehaviour
     public GameObject Box;
     public GameObject textBox;
     public GameObject ButtonOpen;
-    public GameObject ButtonClose;
+    //public GameObject ButtonClose;
     public Animator animator;
     public PauseMenu pausemenu;
 
@@ -22,7 +22,7 @@ public class OpenClose : MonoBehaviour
     private void Start()
     {
         ButtonOpen.SetActive(false);
-        ButtonClose.SetActive(false);
+       // ButtonClose.SetActive(false);
         textBox.SetActive(false); 
         Photo.SetActive(false);
     }
@@ -40,7 +40,7 @@ public class OpenClose : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             ButtonOpen.SetActive(false);
-            ButtonClose.SetActive(false);
+           // ButtonClose.SetActive(false);
             textBox.SetActive(false);
         }
     }
@@ -61,7 +61,7 @@ public class OpenClose : MonoBehaviour
     {
         ExeuterTrigger("TrOpen");
         ButtonOpen.SetActive(false);
-        ButtonClose.SetActive(true);
+        //ButtonClose.SetActive(true);
         Photo.SetActive(true);
         isOpen = true;
         textBox.SetActive(true);
@@ -73,7 +73,7 @@ public class OpenClose : MonoBehaviour
     {
         ExeuterTrigger("TrClose");
         ButtonOpen.SetActive(true);
-        ButtonClose.SetActive(false);
+       // ButtonClose.SetActive(false);
         isOpen = false;
         Photo.SetActive(false);
         textBox.SetActive(false);
