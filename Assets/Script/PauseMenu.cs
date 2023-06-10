@@ -7,13 +7,11 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     public static bool isPaused;
-    public Button PauseButton;
     public GameObject endScreen;
     private void Start() {
         pauseMenu.SetActive(false);
         endScreen.SetActive(false);
-        PauseButton = GameObject.Find("ButtonForPause").GetComponent<Button>();
-        PauseButton.onClick.AddListener(PauseBehavior);
+        Time.timeScale = 1f;
     }
     private void PauseBehavior(){
         if(isPaused){
@@ -39,7 +37,7 @@ public class PauseMenu : MonoBehaviour
 
     public void GoToClassroom(){
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Classroom");
+        SceneManager.LoadScene("class");
     }
     public void GoToClinic(){
         Time.timeScale = 1f;
