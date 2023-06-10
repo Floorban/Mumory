@@ -41,7 +41,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void GoToClinic(){
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Clinic");
+        SceneManager.LoadScene("real_clinic");
     }
     public void GoToHallway(){
         Time.timeScale = 1f;
