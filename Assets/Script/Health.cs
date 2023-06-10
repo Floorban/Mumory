@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using System.Threading;
 
 public class Health : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Health : MonoBehaviour
     private Bloom _bloom;
     public Text healthText;
     public Image healthBar;
+    private GameObject _deathScreen;
 
     public float health, maxHealth = 100;
     float lerpSpeed;
@@ -19,6 +21,8 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _deathScreen = GameObject.Find("DeathScreen");
+        _deathScreen.SetActive(false);
         health = 40;
         if (postProcessingVolume.profile.TryGet(out _bloom))
     {
@@ -42,6 +46,12 @@ public class Health : MonoBehaviour
         HealthBarFiller();
         ColorChanger();
 
+        if (health <= 0)
+        {
+            Thread.Sleep(1000);
+            _deathScreen.SetActive(true);
+            Time.timeScale = 0f;
+        }
         if (health >= 0)
         {
             _bloom.intensity.value = 1f;
