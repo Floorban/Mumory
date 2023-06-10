@@ -25,7 +25,10 @@ public class ButtonText : MonoBehaviour
 
     void OnTriggerExit()
     {
-        Textfield.SetActive(false);
+        if (Textfield != null)
+        {
+            Textfield.SetActive(false);
+        }
     }
    
 }
