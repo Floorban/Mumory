@@ -8,10 +8,41 @@ public class ManagerNPCUi : MonoBehaviour
     private GameObject objPlayer;
     public Image prefabUi;
     private Image uiUse;   
-    //private Transform tr_head;
+    private bool imageDisabled = false;
+    private const float maxClosestDistance = 4.5f;
     public Vector3 offset = new Vector3(0, 1.5f, 0);
+    private void OnEnable(){
+        QTE2Activator.OnButtonPress += OnButtonPress;
+    }
+    private void OnDisable(){
+        QTE2Activator.OnButtonPress -= OnButtonPress;
+    }
+    private void OnButtonPress()
+    {
 
-    // Start is called before the first frame update
+        Transform playerTransform = objPlayer.transform;
+        float closestDistance = Mathf.Infinity;
+        Image closestImage = null;
+        imageDisabled = false;
+        foreach (ManagerNPCUi npcUi in FindObjectsOfType<ManagerNPCUi>())
+        {
+            if (npcUi != this)
+            {
+                float distance = Vector3.Distance(npcUi.transform.position, playerTransform.position);
+                if (distance < closestDistance && distance <= maxClosestDistance && !npcUi.imageDisabled)
+                {
+                    closestDistance = distance;
+                    closestImage = npcUi.uiUse;
+                }
+            }
+        }
+        if (closestImage != null && !imageDisabled)
+        {
+            closestImage.enabled = false;
+            imageDisabled = true;
+            return;
+        }
+    }
     void Start()
     {
         objPlayer = GameObject.FindGameObjectWithTag("Player");

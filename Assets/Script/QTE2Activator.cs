@@ -8,7 +8,9 @@ public class QTE2Activator : OpenClose
     public GameObject QTE2;
     //public GameObject Photo;
     private bool isQTEActive = false;
-    private bool haspressedbefore = false;
+    public bool haspressedbefore = false;
+    public static System.Action OnButtonPress;
+    private bool eventHappened = false;
     public CameraFollow camerafollow;
 
     public QTE2Script qte2script;
@@ -36,8 +38,17 @@ public class QTE2Activator : OpenClose
         textBox.SetActive(true);
     }
     public void Update(){
-        
-
+        if (haspressedbefore)
+         {
+            ButtonOpen.gameObject.SetActive(false);
+            EventHandler();
+         }
+    }
+    void EventHandler(){
+        if (!eventHappened){
+            OnButtonPress?.Invoke();
+            eventHappened = true;
+        }
     }
     public void OpenButtonPressed(){
          if (!haspressedbefore && !isQTEActive){
@@ -45,11 +56,10 @@ public class QTE2Activator : OpenClose
             isQTEActive = true;
             QTE2.SetActive(true);
             ButtonOpen.SetActive(false);
+            eventHappened = false;
             //camerafollow.offset = new Vector3(0, 10, 0);
-            
           //  ButtonClose.SetActive(false);
          }
-        
         
          isQTEActive = false;
          haspressedbefore = true;
