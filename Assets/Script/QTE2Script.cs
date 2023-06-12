@@ -10,6 +10,8 @@ public class QTE2Script : MonoBehaviour
     public GameObject Joystick;
     public Image Bar;
 
+     public Animator DialogueAnimator;
+
     public CameraFollow camerafollow;
     public RectTransform ButtonContainer;
     public float _value;
@@ -57,8 +59,6 @@ public class QTE2Script : MonoBehaviour
         ResetAtZero();
         StageHandler();
 
-
-        
     }
     void BarDecrease()
     {
@@ -129,6 +129,7 @@ public class QTE2Script : MonoBehaviour
                 
                 case 1:
                 hashappened = true;
+                 DialogueAnimator.SetTrigger("Enter");
                 TextSwitch.text = "Clean the room Aletta!";
                 break;
                 case 2:
@@ -166,6 +167,7 @@ public class QTE2Script : MonoBehaviour
                 break;
                 case 5:
                 hashappened = true;
+                 DialogueAnimator.SetTrigger("Exit");
                
                 Joystick.SetActive(true);
                 _stage = 1;

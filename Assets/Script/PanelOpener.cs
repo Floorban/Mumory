@@ -8,11 +8,13 @@ public class PanelOpener : MonoBehaviour
     public GameObject BOpen;
     public GameObject BClose;
 
+    public DialogueController dialoguecontroller;
+
     public CameraFollow camerafollow;
 
      private Vector3 initialOffset;
 
-    public GameObject Narration;
+   // public GameObject Narration;
     private bool _isOpen = false;
     //private Textbox textbox;
 
@@ -23,7 +25,8 @@ public class PanelOpener : MonoBehaviour
         Photo.SetActive(false);
         BOpen.SetActive(false);
         BClose.SetActive(false);
-        Narration.SetActive(false);
+       // Narration.SetActive(false);
+      
 
         CameraFollow offset = GetComponent<CameraFollow>();
         initialOffset = camerafollow.offset;
@@ -44,7 +47,7 @@ public class PanelOpener : MonoBehaviour
             Photo.SetActive(false);
             BOpen.SetActive(false);
             BClose.SetActive(false);
-            Narration.SetActive(false);
+            //Narration.SetActive(false);
 
             camerafollow.offset = initialOffset;
             
@@ -55,7 +58,9 @@ public class PanelOpener : MonoBehaviour
         BOpen.SetActive(false);
         BClose.SetActive(true);
         Photo.SetActive(true);
-        Narration.SetActive(true);
+       // Narration.SetActive(true);
+       dialoguecontroller.NextSentence();
+       dialoguecontroller.DialogueAnimator.SetTrigger("Enter");
 
         camerafollow.offset = new Vector3(0, 10, 0);
 
@@ -66,8 +71,10 @@ public class PanelOpener : MonoBehaviour
         BOpen.SetActive(true);
         BClose.SetActive(false);
         Photo.SetActive(false);
-        Narration.SetActive(false);
+        //Narration.SetActive(false);
         soundPlayer.Play();
+        dialoguecontroller.Index = 0;
+        dialoguecontroller.DialogueAnimator.SetTrigger("Exit");
         
         camerafollow.offset = initialOffset;
         

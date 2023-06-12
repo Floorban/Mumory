@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class DialogueController : MonoBehaviour
+public class OpenerController : MonoBehaviour
 {
+    public GameObject Photo;
     public TextMeshProUGUI DialogueText;
     public string[] Sentences;
     public int Index = 0;
@@ -13,40 +14,40 @@ public class DialogueController : MonoBehaviour
     public Animator DialogueAnimator;
 
     public GameObject ButtonOpen;
-    public GameObject ButtonContinue;
+    public GameObject ButtonClose;
 
      public GameObject Joystick;
 
      private bool isFinished;
 
      public CameraFollow camerafollow;
-      private Vector3 initialOffset;
+    private Vector3 initialOffset;
     
      
     private void Start() 
     {
         isFinished = true;
-         CameraFollow offset = GetComponent<CameraFollow>();
+        CameraFollow offset = GetComponent<CameraFollow>();
         initialOffset = camerafollow.offset;
+        ButtonClose.SetActive(false);
+        ButtonOpen.SetActive(false);
+            
     }
     
     private void Update()
     {
-        if (Index >= 0 && Index < Sentences.Length)
-        {
-            if (DialogueText.text == Sentences[Index])
-            {
-                ButtonContinue.SetActive(true);
-            }
-        }
+        
 
         if (isFinished == false)
         {
             Joystick.SetActive(false);
+            Photo.SetActive(true);
         }
         else
         {
             Joystick.SetActive(true);
+            Photo.SetActive(false);
+            ButtonClose.SetActive(false);
         }
     }
     private void OnTriggerEnter(Collider other) 
@@ -57,15 +58,7 @@ public class DialogueController : MonoBehaviour
         }
         
     }
-    private void OnTriggerExit(Collider other) 
-    {
-        if (other.CompareTag("Player"))
-        {
-            ButtonOpen.SetActive(false);
-            ButtonContinue.SetActive(false);
-        }
-        
-    }
+
 
     public void BeginDialogue()
     {
@@ -73,13 +66,15 @@ public class DialogueController : MonoBehaviour
             isFinished = false;
             DialogueAnimator.SetTrigger("Enter");
             ButtonOpen.SetActive(false);
-            ButtonContinue.SetActive(true);
+            ButtonClose.SetActive(true);
             NextSentence();
+            
+
   
     }
     public void NextSentence()
     {
-        ButtonContinue.SetActive(false);
+       
         if (Index <= Sentences.Length - 1)
         {
             
@@ -91,9 +86,9 @@ public class DialogueController : MonoBehaviour
             DialogueText.text = "";
             DialogueAnimator.SetTrigger("Exit");
             Index = 0;
-            ButtonContinue.SetActive(false);
+           
             isFinished = true;
-             camerafollow.offset = initialOffset;
+            camerafollow.offset = initialOffset;
         }
     }
 
