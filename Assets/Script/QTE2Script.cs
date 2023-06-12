@@ -130,45 +130,44 @@ public class QTE2Script : MonoBehaviour
                 case 1:
                 hashappened = true;
                  DialogueAnimator.SetTrigger("Enter");
-                TextSwitch.text = "Clean the room Aletta!";
+                TextSwitch.text = "Go clean the house Aletta!";
                 break;
                 case 2:
                 hashappened = true;
                 if (WinPoints)
                 {
-                    TextSwitch.text = "Come on! Don't you dare do it again!";
+                    TextSwitch.text = "Come on! Don't you dare do that again!";
 
                 }
                 else
                 {
-                    TextSwitch.text = "Yes! That's what women should do!";
+                    TextSwitch.text = "Yes! That's how it should be done!";
                 }
                 break;
                 case 3:
                 hashappened = true;
                 if (WinPoints){
-                    TextSwitch.text = "Come on! Don't you dare do it again!";
+                    TextSwitch.text = "Come on! Don't you dare do that again!";
                 }
                 else
                 {
-                    TextSwitch.text = "Yes! That's what women should do!";
+                    TextSwitch.text = "Yes! That's how it should be done!";
                 }
                 break;
                 case 4:
                 if (WinPoints)
                 {
-                    TextSwitch.text = "Come on! Don't you dare do it again!";
+                    TextSwitch.text = "Come on! Don't you dare do that again!";
                 }
                 else
                 {
-                    TextSwitch.text = "Yes! That's what women should do!";
+                    TextSwitch.text = "Yes! That's how it should be done!";
                 }
                 hashappened = true;
                 break;
                 case 5:
                 hashappened = true;
-                 DialogueAnimator.SetTrigger("Exit");
-               
+
                 Joystick.SetActive(true);
                 _stage = 1;
                 OnBoolValueChanged?.Invoke(VictoryValue);
@@ -199,5 +198,6 @@ public class QTE2Script : MonoBehaviour
     {
          //Reset the camera offset to its initial value
         camerafollow.offset = initialOffset;
+        DialogueAnimator.SetTrigger("Exit");
     }
 }
