@@ -55,6 +55,15 @@ public class OpenerController : MonoBehaviour
         
     }
 
+    private void OnTriggerExit(Collider other) 
+    {
+        if (other.CompareTag("Player"))
+        {
+            ButtonOpen.SetActive(false);
+            ButtonClose.SetActive(false);
+        }
+        
+    }
 
     public void BeginDialogue()
     {
