@@ -141,7 +141,7 @@ public class QTE2Script : MonoBehaviour
                 }
                 else
                 {
-                    TextSwitch.text = "Good job Aletta! That's what women should do!";
+                    TextSwitch.text = "Yes! That's what women should do!";
                 }
                 break;
                 case 3:
@@ -151,7 +151,7 @@ public class QTE2Script : MonoBehaviour
                 }
                 else
                 {
-                    TextSwitch.text = "Good job Aletta! That's what women should do!";
+                    TextSwitch.text = "Yes! That's what women should do!";
                 }
                 break;
                 case 4:
@@ -161,7 +161,7 @@ public class QTE2Script : MonoBehaviour
                 }
                 else
                 {
-                    TextSwitch.text = "Good job Aletta! That's what women should do!";
+                    TextSwitch.text = "Yes! That's what women should do!";
                 }
                 hashappened = true;
                 break;

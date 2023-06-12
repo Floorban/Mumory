@@ -16,8 +16,6 @@ public class OpenerController : MonoBehaviour
     public GameObject ButtonOpen;
     public GameObject ButtonClose;
 
-     public GameObject Joystick;
-
      private bool isFinished;
 
      public CameraFollow camerafollow;
@@ -40,12 +38,10 @@ public class OpenerController : MonoBehaviour
 
         if (isFinished == false)
         {
-            Joystick.SetActive(false);
             Photo.SetActive(true);
         }
         else
         {
-            Joystick.SetActive(true);
             Photo.SetActive(false);
             ButtonClose.SetActive(false);
         }
