@@ -14,6 +14,8 @@ public class OpenClose : MonoBehaviour
     public PauseMenu pausemenu;
 
     public GameObject Photo;
+
+     public GameObject Menu;
     private bool isOpen = false;
     
 
@@ -25,6 +27,7 @@ public class OpenClose : MonoBehaviour
        // ButtonClose.SetActive(false);
         textBox.SetActive(false); 
         Photo.SetActive(false);
+        Menu.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -66,6 +69,7 @@ public class OpenClose : MonoBehaviour
         isOpen = true;
         textBox.SetActive(true);
         soundPlayer.Play();
+        Menu.SetActive(true);
         
     }
 

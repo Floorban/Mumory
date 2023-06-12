@@ -54,7 +54,7 @@ public class PauseMenu : MonoBehaviour
 
     public void GoToOrigin(){
         Time.timeScale = 1f;
-        SceneManager.LoadScene("origin");
+        SceneManager.LoadScene("Home");
     }
     public void QuitGame(){
         Application.Quit();
