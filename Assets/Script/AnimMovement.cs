@@ -16,6 +16,8 @@ public class AnimMovement : MonoBehaviour
     bool isMovementPressed;
     float rotationFactorPerFrame = 3.5f;
 
+    public AudioSource footstepsSound;
+
     void Awake()
     {
         playerInput = new PlayerInput();
@@ -60,10 +62,12 @@ public class AnimMovement : MonoBehaviour
         if (isMovementPressed && !walking)
         {
             animator.SetBool("walking", true);
+            footstepsSound.enabled = true;
         }
         else if (!isMovementPressed && walking)
         {
             animator.SetBool("walking", false);
+            footstepsSound.enabled = false;
         }
 
         
@@ -75,6 +79,8 @@ public class AnimMovement : MonoBehaviour
         handleAnimation();
         handleRotation();
         characterController.Move(currentMovement * Time.deltaTime * 3.5f);
+
+       
     }
 
     void OnEnable()
