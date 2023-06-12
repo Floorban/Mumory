@@ -38,7 +38,6 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthText.text = health + "%";
         if(health > maxHealth) health = maxHealth;
 
         lerpSpeed = 5f * Time.deltaTime;
