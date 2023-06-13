@@ -8762,6 +8762,7 @@ MonoBehaviour:
   DialogueAnimator: {fileID: 449972411}
   ButtonOpen: {fileID: 771426753}
   ButtonClose: {fileID: 595664206}
+  soundPlayer: {fileID: 0}
   camerafollow: {fileID: 1613661782}
 --- !u!1 &754719199
 GameObject:
@@ -18761,7 +18762,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1914414276
 MonoBehaviour:
   m_ObjectHideFlags: 0

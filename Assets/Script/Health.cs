@@ -11,7 +11,7 @@ public class Health : MonoBehaviour
     //public QTE2Script qte2Script;
     public Volume postProcessingVolume;
 
-    public VolumeProfile volumeProfile;
+   // private VolumeProfile volumeProfile;
     private ColorAdjustments colorAdjustments;
     private Vignette vignette;
     //public Text healthText;
@@ -46,7 +46,7 @@ public class Health : MonoBehaviour
             _deathScreen.SetActive(true);
             Time.timeScale = 0f;
         }
-        if (health >= 0)
+       /* if (health >= 0)
         {
             vignette.intensity.value = 0.95f;
             colorAdjustments.saturation.value = -100f;
@@ -111,7 +111,7 @@ public class Health : MonoBehaviour
         {
             vignette.intensity.value = 0.55f;
             colorAdjustments.saturation.value = 0f;
-        }
+        }*/
      
     }
 
