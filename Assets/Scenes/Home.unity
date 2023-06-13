@@ -6911,6 +6911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   postProcessingVolume: {fileID: 832575518}
+  volumeProfile: {fileID: 0}
   healthBar: {fileID: 501317143}
   health: 40
   maxHealth: 100
@@ -7221,7 +7222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &528122976
 Transform:
   m_ObjectHideFlags: 0
@@ -15477,6 +15478,7 @@ MonoBehaviour:
   DialogueAnimator: {fileID: 596325524}
   ButtonOpen: {fileID: 1395070953}
   ButtonClose: {fileID: 97664568}
+  soundPlayer: {fileID: 750588480}
   camerafollow: {fileID: 330585548}
 --- !u!1001 &878880365
 PrefabInstance:
@@ -20225,6 +20227,7 @@ MonoBehaviour:
   DialogueAnimator: {fileID: 596325524}
   ButtonOpen: {fileID: 1983124209}
   ButtonClose: {fileID: 646841265}
+  soundPlayer: {fileID: 950397529}
   camerafollow: {fileID: 330585548}
 --- !u!1 &1213919047
 GameObject:
@@ -20376,6 +20379,7 @@ MonoBehaviour:
   DialogueAnimator: {fileID: 596325524}
   ButtonOpen: {fileID: 1547155401}
   ButtonClose: {fileID: 210481289}
+  soundPlayer: {fileID: 1758229782}
   camerafollow: {fileID: 330585548}
 --- !u!1001 &1215934020
 PrefabInstance:
@@ -22243,7 +22247,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1342559343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23990,6 +23994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   postProcessingVolume: {fileID: 832575518}
+  volumeProfile: {fileID: 0}
   healthBar: {fileID: 1481764108}
   health: 40
   maxHealth: 100
@@ -25762,7 +25767,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1602633061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32670,6 +32675,7 @@ MonoBehaviour:
   DialogueAnimator: {fileID: 596325524}
   ButtonOpen: {fileID: 967104697}
   ButtonClose: {fileID: 2034255792}
+  soundPlayer: {fileID: 294420280}
   camerafollow: {fileID: 330585548}
 --- !u!114 &919132149541952434
 MonoBehaviour:
@@ -32977,6 +32983,7 @@ MonoBehaviour:
   DialogueAnimator: {fileID: 596325524}
   ButtonOpen: {fileID: 1588002949}
   ButtonClose: {fileID: 686814188}
+  soundPlayer: {fileID: 1336880582}
   camerafollow: {fileID: 330585548}
 --- !u!33 &3010172807854329993
 MeshFilter:

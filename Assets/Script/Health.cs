@@ -10,7 +10,10 @@ public class Health : MonoBehaviour
 {
     //public QTE2Script qte2Script;
     public Volume postProcessingVolume;
-    private Bloom _bloom;
+
+    public VolumeProfile volumeProfile;
+    private ColorAdjustments colorAdjustments;
+    private Vignette vignette;
     //public Text healthText;
     public Image healthBar;
     private GameObject _deathScreen;
@@ -24,15 +27,7 @@ public class Health : MonoBehaviour
         _deathScreen = GameObject.Find("DeathScreen");
         _deathScreen.SetActive(false);
         health = 40;
-        if (postProcessingVolume.profile.TryGet(out _bloom))
-    {
-        // Successfully retrieved the Bloom component
-        // Now you can use _bloom to modify the bloom intensity
-    }
-    else
-    {
-        Debug.LogWarning("Bloom component not found in the post-processing volume.");
-    }
+  
     }
 
     // Update is called once per frame
@@ -53,32 +48,69 @@ public class Health : MonoBehaviour
         }
         if (health >= 0)
         {
-            _bloom.intensity.value = 1f;
+            vignette.intensity.value = 0.95f;
+            colorAdjustments.saturation.value = -100f;
         }
 
            if (health >= 10)
         {
-            _bloom.intensity.value = 2f;
+            vignette.intensity.value = 0.9f;
+            colorAdjustments.saturation.value = -90f;
         }
 
            if (health >= 20)
         {
-            _bloom.intensity.value = 3f;
+            vignette.intensity.value = 0.85f;
+            colorAdjustments.saturation.value = -80f;
         }
 
            if (health >= 30)
         {
-            _bloom.intensity.value = 4f;
+            vignette.intensity.value = 0.8f;
+            colorAdjustments.saturation.value = -70f;
         }
 
            if (health >= 40)
         {
-            _bloom.intensity.value = 5f;
+            vignette.intensity.value = 0.75f;
+            colorAdjustments.saturation.value = -60f;
         }
 
            if (health >= 50)
         {
-            _bloom.intensity.value = 6f;
+            vignette.intensity.value = 0.73f;
+            colorAdjustments.saturation.value = -50f;
+        }
+        
+        
+           if (health >= 60)
+        {
+            vignette.intensity.value = 0.7f;
+            colorAdjustments.saturation.value = -40f;
+        }
+        
+           if (health >= 70)
+        {
+            vignette.intensity.value = 0.67f;
+            colorAdjustments.saturation.value = -30f;
+        }
+        
+           if (health >= 80)
+        {
+            vignette.intensity.value = 0.64f;
+            colorAdjustments.saturation.value = -20f;
+        }
+        
+           if (health >= 90)
+        {
+            vignette.intensity.value = 0.6f;
+            colorAdjustments.saturation.value = -10f;
+        }
+        
+           if (health >= 100)
+        {
+            vignette.intensity.value = 0.55f;
+            colorAdjustments.saturation.value = 0f;
         }
      
     }

@@ -15,11 +15,13 @@ public class OpenerController : MonoBehaviour
 
     public GameObject ButtonOpen;
     public GameObject ButtonClose;
+    public AudioSource soundPlayer;
 
      private bool isFinished;
 
      public CameraFollow camerafollow;
     private Vector3 initialOffset;
+
     
      
     private void Start() 
@@ -29,13 +31,15 @@ public class OpenerController : MonoBehaviour
         initialOffset = camerafollow.offset;
         ButtonClose.SetActive(false);
         ButtonOpen.SetActive(false);
+        Health Heal = GetComponent<Health>();
+        
             
     }
     
     private void Update()
     {
-        
-
+      
+       
         if (isFinished == false)
         {
             Photo.SetActive(true);
@@ -73,6 +77,7 @@ public class OpenerController : MonoBehaviour
             ButtonOpen.SetActive(false);
             ButtonClose.SetActive(true);
             NextSentence();
+          
             
 
   
@@ -85,6 +90,7 @@ public class OpenerController : MonoBehaviour
             
             DialogueText.text = "";
             StartCoroutine(WriteSentence());
+            
         }
         else
         {
@@ -94,6 +100,7 @@ public class OpenerController : MonoBehaviour
            
             isFinished = true;
             camerafollow.offset = initialOffset;
+            soundPlayer.Play();
         }
     }
 
@@ -107,4 +114,6 @@ public class OpenerController : MonoBehaviour
 
         Index++;
     }
+
+  
 }
