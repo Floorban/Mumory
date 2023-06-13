@@ -7,7 +7,7 @@ using TMPro;
 public class OpenClose : MonoBehaviour
 {
     public GameObject Box;
-    public GameObject textBox;
+    //public GameObject textBox;
     public GameObject ButtonOpen;
     //public GameObject ButtonClose;
     public Animator animator;
@@ -25,7 +25,7 @@ public class OpenClose : MonoBehaviour
     {
         ButtonOpen.SetActive(false);
        // ButtonClose.SetActive(false);
-        textBox.SetActive(false); 
+        //textBox.SetActive(false); 
         Photo.SetActive(false);
         Menu.SetActive(false);
     }
@@ -44,7 +44,7 @@ public class OpenClose : MonoBehaviour
         {
             ButtonOpen.SetActive(false);
            // ButtonClose.SetActive(false);
-            textBox.SetActive(false);
+            //textBox.SetActive(false);
         }
     }
 
@@ -67,7 +67,7 @@ public class OpenClose : MonoBehaviour
         //ButtonClose.SetActive(true);
         Photo.SetActive(true);
         isOpen = true;
-        textBox.SetActive(true);
+        //textBox.SetActive(true);
         soundPlayer.Play();
         Menu.SetActive(true);
         
@@ -80,7 +80,7 @@ public class OpenClose : MonoBehaviour
        // ButtonClose.SetActive(false);
         isOpen = false;
         Photo.SetActive(false);
-        textBox.SetActive(false);
+        //textBox.SetActive(false);
         pausemenu.PauseGame();
         
     }

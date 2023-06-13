@@ -358,7 +358,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5870869}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2037732453}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: PauseGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6903652
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,7 +1548,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Box: {fileID: 89852964}
-  textBox: {fileID: 0}
   ButtonOpen: {fileID: 795048547}
   animator: {fileID: 89852967}
   pausemenu: {fileID: 2037732453}
@@ -3935,7 +3946,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Box: {fileID: 320938284}
-  textBox: {fileID: 0}
   ButtonOpen: {fileID: 2139997199}
   animator: {fileID: 1347462708}
   pausemenu: {fileID: 0}
@@ -12633,7 +12643,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &832575518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16078,7 +16088,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 6.09, y: 1.96, z: 5.57}
-  m_Center: {x: 0, y: 1.67, z: 0.96}
+  m_Center: {x: 0, y: 1.95, z: 0.96}
 --- !u!4 &1002144221 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4121909181499903135, guid: 3ff33e83db392a54b95bee7ed5c5ab5d,
@@ -30302,7 +30312,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Box: {fileID: 919132148248397782}
-  textBox: {fileID: 0}
   ButtonOpen: {fileID: 744217770}
   animator: {fileID: 1347462708}
   pausemenu: {fileID: 0}
@@ -31084,7 +31093,7 @@ PrefabInstance:
     - target: {fileID: 8116151517275090576, guid: 4908f2eea42b13e43a00d211501b0f2a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8928822085969359914, guid: 4908f2eea42b13e43a00d211501b0f2a,
         type: 3}

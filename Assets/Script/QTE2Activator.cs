@@ -43,7 +43,7 @@ public class QTE2Activator : OpenClose
     {
         // ButtonClose.SetActive(true);
         // Photo.SetActive(true);
-        textBox.SetActive(true);
+        //textBox.SetActive(true);
     }
     public void Update()
     {
