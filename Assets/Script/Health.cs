@@ -12,8 +12,8 @@ public class Health : MonoBehaviour
     public Volume postProcessingVolume;
 
    // private VolumeProfile volumeProfile;
-    private ColorAdjustments colorAdjustments;
-    private Vignette vignette;
+    private ColorAdjustments _colorAdjustments;
+    private Vignette _vignette;
     //public Text healthText;
     public Image healthBar;
     private GameObject _deathScreen;
@@ -24,9 +24,28 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+         if (postProcessingVolume.profile.TryGet(out _vignette))
+    {
+        // Successfully retrieved the Bloom component
+        // Now you can use _bloom to modify the bloom intensity
+    }
+    else
+    {
+        Debug.LogWarning("Bloom component not found in the post-processing volume.");
+    }
+     if (postProcessingVolume.profile.TryGet(out _colorAdjustments))
+    {
+        // Successfully retrieved the Bloom component
+        // Now you can use _bloom to modify the bloom intensity
+    }
+    else
+    {
+        Debug.LogWarning("Bloom component not found in the post-processing volume.");
+    
         _deathScreen = GameObject.Find("DeathScreen");
         _deathScreen.SetActive(false);
         health = 40;
+    }
   
     }
 
@@ -46,72 +65,72 @@ public class Health : MonoBehaviour
             _deathScreen.SetActive(true);
             Time.timeScale = 0f;
         }
-       /* if (health >= 0)
+        if (health >= 0)
         {
-            vignette.intensity.value = 0.95f;
-            colorAdjustments.saturation.value = -100f;
+            _vignette.intensity.value = 0.95f;
+            _colorAdjustments.saturation.value = -100f;
         }
 
            if (health >= 10)
         {
-            vignette.intensity.value = 0.9f;
-            colorAdjustments.saturation.value = -90f;
+            _vignette.intensity.value = 0.9f;
+            _colorAdjustments.saturation.value = -90f;
         }
 
            if (health >= 20)
         {
-            vignette.intensity.value = 0.85f;
-            colorAdjustments.saturation.value = -80f;
+            _vignette.intensity.value = 0.85f;
+            _colorAdjustments.saturation.value = -80f;
         }
 
            if (health >= 30)
         {
-            vignette.intensity.value = 0.8f;
-            colorAdjustments.saturation.value = -70f;
+            _vignette.intensity.value = 0.8f;
+            _colorAdjustments.saturation.value = -70f;
         }
 
            if (health >= 40)
         {
-            vignette.intensity.value = 0.75f;
-            colorAdjustments.saturation.value = -60f;
+            _vignette.intensity.value = 0.75f;
+            _colorAdjustments.saturation.value = -60f;
         }
 
            if (health >= 50)
         {
-            vignette.intensity.value = 0.73f;
-            colorAdjustments.saturation.value = -50f;
+            _vignette.intensity.value = 0.73f;
+            _colorAdjustments.saturation.value = -50f;
         }
         
         
            if (health >= 60)
         {
-            vignette.intensity.value = 0.7f;
-            colorAdjustments.saturation.value = -40f;
+            _vignette.intensity.value = 0.7f;
+            _colorAdjustments.saturation.value = -40f;
         }
         
            if (health >= 70)
         {
-            vignette.intensity.value = 0.67f;
-            colorAdjustments.saturation.value = -30f;
+            _vignette.intensity.value = 0.67f;
+            _colorAdjustments.saturation.value = -30f;
         }
         
            if (health >= 80)
         {
-            vignette.intensity.value = 0.64f;
-            colorAdjustments.saturation.value = -20f;
+            _vignette.intensity.value = 0.64f;
+            _colorAdjustments.saturation.value = -20f;
         }
         
            if (health >= 90)
         {
-            vignette.intensity.value = 0.6f;
-            colorAdjustments.saturation.value = -10f;
+            _vignette.intensity.value = 0.6f;
+            _colorAdjustments.saturation.value = -10f;
         }
         
            if (health >= 100)
         {
-            vignette.intensity.value = 0.55f;
-            colorAdjustments.saturation.value = 0f;
-        }*/
+            _vignette.intensity.value = 0.55f;
+            _colorAdjustments.saturation.value = 0f;
+        }
      
     }
 
