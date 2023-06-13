@@ -32,6 +32,29 @@ public class QTE2Script : MonoBehaviour
     private GameObject Background;
     private GameObject ButtonObject;
     private GameObject TextObject;
+    // Subscribe to the OnStageChange event
+    private void OnEnable()
+    {
+        QTE2Activator.OnStageChange += HandleStageChange;
+        QTE2Activator.OnEventHappened += HandleEventHappened;
+    }
+
+    // Unsubscribe from the OnStageChange event
+    private void OnDisable()
+    {
+        QTE2Activator.OnStageChange -= HandleStageChange;
+        QTE2Activator.OnEventHappened -= HandleEventHappened;
+    }
+    private void HandleStageChange(int newStage)
+    {
+        _stage = newStage;
+        // Handle the new stage value as needed
+    }
+    private void HandleEventHappened(bool value)
+    {
+        hashappened = value;
+        // Handle the new value as needed
+    }
 
     private Vector3 initialOffset;
 
@@ -85,10 +108,10 @@ public class QTE2Script : MonoBehaviour
     ScaleUpDown(ButtonObject);
     ScaleUpDown(Background);
     if (_value >= 100)
-    {   
+    {
         _stage++;
-        hashappened = false;
-        Debug.Log(_stage);
+            hashappened = false;
+            Debug.Log(_stage);
         //ResetValueTo(40);
         DecreaseRate = 100f;
         WinPoints = false;
@@ -103,34 +126,33 @@ public class QTE2Script : MonoBehaviour
     }   
     void ResetAtZero()
     {
-         
         if (_value <= 0)
-    {   
-        _stage++;
-        hashappened = false;
-        WinPoints = true;
+        {
+            _stage++;
+            hashappened = false;
+            WinPoints = true;
         Debug.Log(_stage);
         DecreaseRate = 100f;
         _value = 40;
         OnShake();
         // Apply health damage when value reaches 100
         health.Heal(10f);
-    }
-     if (_value <= 40)
-    {
-         DecreaseRate = 15f;
-    }
+        }
+         if (_value <= 40)
+         {
+           DecreaseRate = 15f;
+         }
     }
     void StageHandler(){
         if (hashappened == false)
         {
             //camerafollow.offset = new Vector3(0, 10, 0);
             switch(_stage){
-                
                 case 1:
-                hashappened = true;
-                 DialogueAnimator.SetTrigger("Enter");
-                TextSwitch.text = "Go clean the house Aletta!";
+                    hashappened = true;
+                    DialogueAnimator.SetTrigger("Enter");
+                    TextSwitch.enabled = true;
+                    TextSwitch.text = "Clean the room Aletta!";
                 break;
                 case 2:
                 hashappened = true;
@@ -167,12 +189,12 @@ public class QTE2Script : MonoBehaviour
                 break;
                 case 5:
                 hashappened = true;
-
-                Joystick.SetActive(true);
-                _stage = 1;
+                DialogueAnimator.SetTrigger("Exit");
+                    TextSwitch.enabled = false;
+                    Joystick.SetActive(true);
                 OnBoolValueChanged?.Invoke(VictoryValue);
-                this.gameObject.SetActive(false);
-                ResetOffset();
+                    ResetOffset();
+                    this.gameObject.SetActive(false);
                 break;
                 default:
                 Debug.Log("Invalid stage: " + _stage);
