@@ -15,9 +15,11 @@ public class CameraShake : MonoBehaviour
     }
     private void OnEnable() {
         QTE2Script.OnShake += CameraShakeFunc;
+        QTE.OnShake += CameraShakeFunc;
     }
     private void OnDisable() {
         QTE2Script.OnShake -= CameraShakeFunc;
+        QTE.OnShake -= CameraShakeFunc;
     }
 
     public void CameraShakeFunc(){

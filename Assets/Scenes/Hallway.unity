@@ -11570,8 +11570,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.1802, y: 72.4924}
-  m_SizeDelta: {x: 720.49, y: 383.3176}
+  m_AnchoredPosition: {x: 3.7421, y: 51.9635}
+  m_SizeDelta: {x: 732.78, y: 406.4125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1732187376
 MonoBehaviour:
@@ -11621,8 +11621,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 105
-  m_fontSizeBase: 105
+  m_fontSize: 110
+  m_fontSizeBase: 110
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11632,7 +11632,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: -2
-  m_wordSpacing: -1
+  m_wordSpacing: -2
   m_lineSpacing: -10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -15289,7 +15289,7 @@ MonoBehaviour:
   - Welcome to Mumory!
   - You're playing as Aletta Jacob in this game
   - Who's one of the greatest women in Dutch history
-  - The radius bar at the left down corner shows you Knowledge of Aletta Jacob
+  - The radius bar at the left down corner shows your Knowledge of Aletta Jacob
   - You need to know more about her to accomplish the level
   - Go ahead and enjoy!
   Index: 0

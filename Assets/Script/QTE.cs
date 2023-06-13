@@ -35,15 +35,15 @@ public class QTE : MonoBehaviour
     // Subscribe to the OnStageChange event
     private void OnEnable()
     {
-        QTE2Activator.OnStageChange += HandleStageChange;
-        QTE2Activator.OnEventHappened += HandleEventHappened;
+        QTEActive.OnStageChange += HandleStageChange;
+        QTEActive.OnEventHappened += HandleEventHappened;
     }
 
     // Unsubscribe from the OnStageChange event
     private void OnDisable()
     {
-        QTE2Activator.OnStageChange -= HandleStageChange;
-        QTE2Activator.OnEventHappened -= HandleEventHappened;
+        QTEActive.OnStageChange -= HandleStageChange;
+        QTEActive.OnEventHappened -= HandleEventHappened;
     }
     private void HandleStageChange(int newStage)
     {
