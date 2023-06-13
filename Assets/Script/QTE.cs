@@ -63,7 +63,7 @@ public class QTE : MonoBehaviour
         Joystick.SetActive(false);
         Background = GameObject.Find("Background");
         TextObject = GameObject.Find("TextObject");
-        canvasP = GameObject.Find("Canvas").GetComponent<Transform>();
+       // canvasP = GameObject.Find("Canvas").GetComponent<Transform>();
         ButtonObject = GameObject.Find("ButtonClick");
         Transform ButtonClick = transform.Find("ButtonClick");
         Button button = ButtonClick.GetComponent<Button>();
@@ -152,7 +152,7 @@ public class QTE : MonoBehaviour
                     hashappened = true;
                     DialogueAnimator.SetTrigger("Enter");
                     TextSwitch.enabled = true;
-                    TextSwitch.text = "Doing the housework by tapping the button";
+                    TextSwitch.text = "Doing the task by tapping the button";
                 break;
                 case 2:
                 hashappened = true;
