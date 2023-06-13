@@ -5034,7 +5034,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &393606540
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10720,7 +10720,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &665902023
 Transform:
   m_ObjectHideFlags: 0
@@ -11279,9 +11279,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5725546079153733519}
-        m_TargetAssemblyTypeName: PanelOpener, Assembly-CSharp
-        m_MethodName: OnCloseButtonClick
+      - m_Target: {fileID: 2694139136378404682}
+        m_TargetAssemblyTypeName: OpenerController, Assembly-CSharp
+        m_MethodName: NextSentence
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11759,7 +11759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &711551640
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11777,8 +11777,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.42377, y: 109.117035}
-  m_SizeDelta: {x: 172.64, y: 201.4878}
+  m_AnchoredPosition: {x: 0.19582, y: 18}
+  m_SizeDelta: {x: 156.6746, y: 182.8546}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &711551641
 MonoBehaviour:
@@ -16363,9 +16363,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PanelOpener, Assembly-CSharp
-        m_MethodName: OnOpenButtonClick
+      - m_Target: {fileID: 919132149541952433}
+        m_TargetAssemblyTypeName: OpenerController, Assembly-CSharp
+        m_MethodName: BeginDialogue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19847,7 +19847,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1179367870
 Transform:
   m_ObjectHideFlags: 0
@@ -25694,9 +25694,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5725546079153733519}
-        m_TargetAssemblyTypeName: PanelOpener, Assembly-CSharp
-        m_MethodName: OnOpenButtonClick
+      - m_Target: {fileID: 2694139136378404682}
+        m_TargetAssemblyTypeName: OpenerController, Assembly-CSharp
+        m_MethodName: BeginDialogue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -29008,7 +29008,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1946132882
 Transform:
   m_ObjectHideFlags: 0
@@ -30231,9 +30231,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PanelOpener, Assembly-CSharp
-        m_MethodName: OnCloseButtonClick
+      - m_Target: {fileID: 919132149541952433}
+        m_TargetAssemblyTypeName: OpenerController, Assembly-CSharp
+        m_MethodName: NextSentence
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -32461,7 +32461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabUi: {fileID: 5707742579751969317, guid: 29ca97278a2a97449b4f46943cf673eb,
     type: 3}
-  offset: {x: 0, y: 1.5, z: 0}
+  offset: {x: 0, y: -3, z: 0}
 --- !u!23 &543450653211918608
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -32504,22 +32504,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &543450653211918609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132149541952432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b06f3718c4982c4cb00fb725bf674ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DialogueText: {fileID: 1715241522}
-  Sentences:
-  - That's me when I was 13
-  DialogueSpeed: 2
 --- !u!1 &832149484549559429
 GameObject:
   m_ObjectHideFlags: 0
@@ -32568,9 +32552,9 @@ GameObject:
   - component: {fileID: 543450651610290354}
   - component: {fileID: 2090008411}
   - component: {fileID: 2090008412}
-  - component: {fileID: 5725546079153733519}
   - component: {fileID: 323555596786785981}
   - component: {fileID: 2694139136378404681}
+  - component: {fileID: 2694139136378404682}
   m_Layer: 0
   m_Name: kitchencounter
   m_TagString: Untagged
@@ -32657,7 +32641,7 @@ GameObject:
   - component: {fileID: 543450653211918604}
   - component: {fileID: 919132149541952433}
   - component: {fileID: 543450653211918606}
-  - component: {fileID: 543450653211918609}
+  - component: {fileID: 919132149541952434}
   m_Layer: 6
   m_Name: trash bin
   m_TagString: Interactive
@@ -32678,14 +32662,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Photo: {fileID: 711551639}
-  DialogueText: {fileID: 0}
-  Sentences: []
+  DialogueText: {fileID: 1370158019}
+  Sentences:
+  - My birth certificate
   Index: 0
-  DialogueSpeed: 0
-  DialogueAnimator: {fileID: 0}
+  DialogueSpeed: 0.02
+  DialogueAnimator: {fileID: 596325524}
   ButtonOpen: {fileID: 967104697}
   ButtonClose: {fileID: 2034255792}
   camerafollow: {fileID: 330585548}
+--- !u!114 &919132149541952434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149541952432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1022e54d64fcb0489f9ca8abe461909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: f1a871e3a3f3f554ebf6e05b7ec4d202, type: 2}
 --- !u!1001 &937529813262426882
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32956,9 +32954,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e48689a99a02bf4ab64012de79e78f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabUi: {fileID: 2919575233844145592, guid: fb0c24202fe2065408acdd950b89a6fc,
-    type: 3}
+  prefabUi: {fileID: 739766143}
   offset: {x: 0, y: 1.5, z: 0}
+--- !u!114 &2694139136378404682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147889979912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb9267dd767e14f92193492e3a037e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Photo: {fileID: 739766141}
+  DialogueText: {fileID: 1370158019}
+  Sentences:
+  - ' That''s me when I was 13'
+  Index: 0
+  DialogueSpeed: 0.02
+  DialogueAnimator: {fileID: 596325524}
+  ButtonOpen: {fileID: 1588002949}
+  ButtonClose: {fileID: 686814188}
+  camerafollow: {fileID: 330585548}
 --- !u!33 &3010172807854329993
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -33544,24 +33563,6 @@ Transform:
   m_Father: {fileID: 543450651610290354}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5725546079153733519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132147889979912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d8a5fe1d550ad34ba2fe380ea5164fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Photo: {fileID: 739766141}
-  BOpen: {fileID: 1588002949}
-  BClose: {fileID: 686814188}
-  dialoguecontroller: {fileID: 0}
-  camerafollow: {fileID: 330585548}
-  soundPlayer: {fileID: 294420280}
 --- !u!114 &6449381148738437480
 MonoBehaviour:
   m_ObjectHideFlags: 0
