@@ -11,7 +11,7 @@ public class Health : MonoBehaviour
     //public QTE2Script qte2Script;
     public Volume postProcessingVolume;
     private Bloom _bloom;
-    public Text healthText;
+    //public Text healthText;
     public Image healthBar;
     private GameObject _deathScreen;
 

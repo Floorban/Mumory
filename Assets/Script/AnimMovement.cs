@@ -78,7 +78,7 @@ public class AnimMovement : MonoBehaviour
 
         handleAnimation();
         handleRotation();
-        characterController.Move(currentMovement * Time.deltaTime * 3.5f);
+        characterController.Move(currentMovement * Time.deltaTime * 2f);
 
        
     }
